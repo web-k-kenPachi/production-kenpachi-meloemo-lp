@@ -22,7 +22,11 @@ export const Interface = () => {
 const Section = (props) => {
   const { children, backgroundColor } = props;
   return (
-    <section className={`h-full w-full ${backgroundColor}`}>{children}</section>
+    <section
+      className={`h-full w-full ${backgroundColor ? backgroundColor : ""}`}
+    >
+      {children}
+    </section>
   );
 };
 
@@ -403,7 +407,7 @@ const MessageSection = () => {
 
 const Footer = () => {
   return (
-    <footer className="h-auto w-full bg-themePink-500 px-20 py-16">
+    <footer className="h-auto w-screen bg-themePink-500 px-20 py-16">
       <div className="m-auto max-w-[980px]">
         <div className="mb-8 flex w-full items-center justify-between  gap-4 ">
           <div className="w-3/12">
