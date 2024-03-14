@@ -319,7 +319,7 @@ const InfoSection = () => {
         </div>
       </div>
       <div className="h-auto min-h-screen w-screen  px-20 py-12">
-        <h2 className="font-Anton text-themeRed-800 relative z-20 -mr-10 text-right text-6xl">
+        <h2 className="font-Anton relative z-[11] -mr-10 text-right text-6xl text-themePink-500">
           Promotion
         </h2>
         <div className="relative z-10 m-auto -mt-8 min-h-screen w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black">
