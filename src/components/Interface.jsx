@@ -350,7 +350,57 @@ const InfoSection = () => {
 };
 
 const MessageSection = () => {
-  return <div className="">MessageSection</div>;
+  return (
+    <Section>
+      <div className="relative h-full w-full">
+        <figure className="absolute inset-0 -z-10">
+          <img src="./assets/images/bg-message01.jpg" alt="" />
+        </figure>
+        <div className="flex h-auto min-h-screen w-screen justify-end px-20 py-12">
+          <div className="w-4/6">
+            <h2 className="font-Anton text-6xl text-white mix-blend-difference -ml-8">
+              MESSAGE
+            </h2>
+            <div className="font-NotoSans rounded-lg bg-white px-10 py-20 leading-8 -mt-10">
+              <p className="mb-4">
+                このミニアルバムについてと「M3-2023春」での頒布を終えて。
+              </p>
+              <p className="mb-4">
+                kenPachi[.design]
+                feat.初音ミク「めろえも！タッチ・ザ・ハートストリングス」は聴いていただいた方の「“心の琴線”に触れる」ような「えもいメロディー」を感じられるような楽曲を目指し制作しました。
+                <br />
+                このミニアルバムCDはkenPachi[.design]
+                自身初となる楽曲のCD化作品で、「M3-2023春」にて頒布されました。
+                <br />
+                作詞作曲編曲・ジャケットデザイン・入稿データ作成・各種プロモーションを担当しました。
+              </p>
+              <p className="mb-4">
+                制作当時はM3当日に間に合うかどうかのギリギリなスケジュールで入稿しており、かなり切羽詰まった状態で創作に励んでいたように記憶しております。
+                今になって落ち着いて聴くとやはりサウンドの粗さが目立っているように感じますね。
+                <br />
+                音楽的な要素はもとより音質面で特に課題を感じている次第です。
+                <br />
+                （一部の楽曲は自分でミックスし直して新たに発表を予定してます）
+              </p>
+              <p className="mb-4">
+                とはいうものの、初のCD化作品ということもあり私にとっては大事な作品の一つです。
+                未熟さを抱えることの中にも、純粋さや成長の可能性を見出せるような作品として感じていただけましたら幸いです。
+                そしてM3当日、お手に取っていただいた皆様には、深く感謝申し上げます。
+                ありがとうございました。
+                <br />
+                また、配信で聴いていただいている方もありがとうございます。
+              </p>
+              <p className="mb-4">
+                将来的にオンラインでのCD頒布も予定しているほか、
+                各種音楽配信サービスでも視聴できますので今後ともよろしくおねがいいたします！
+              </p>
+              <p className="text-right">kenPachi[.design]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
 };
 
 const Footer = () => {
