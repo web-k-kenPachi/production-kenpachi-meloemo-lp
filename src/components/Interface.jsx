@@ -358,10 +358,10 @@ const MessageSection = () => {
         </figure>
         <div className="flex h-auto min-h-screen w-screen justify-end px-20 py-12">
           <div className="w-4/6">
-            <h2 className="font-Anton text-6xl text-white mix-blend-difference -ml-8">
+            <h2 className="font-Anton -ml-8 text-6xl text-white mix-blend-difference">
               MESSAGE
             </h2>
-            <div className="font-NotoSans rounded-lg bg-white px-10 py-20 leading-8 -mt-10">
+            <div className="font-NotoSans -mt-10 rounded-lg bg-white px-10 py-20 leading-8">
               <p className="mb-4">
                 このミニアルバムについてと「M3-2023春」での頒布を終えて。
               </p>
@@ -404,5 +404,81 @@ const MessageSection = () => {
 };
 
 const Footer = () => {
-  return <footer>Footer</footer>;
+  return (
+    <footer className="h-auto w-full bg-themePink-500 px-20 py-16">
+      <div className="m-auto max-w-[980px]">
+        <div className="mb-8 flex w-full items-center justify-between  gap-4 ">
+          <div className="w-3/12">
+            <figure className="relative overflow-hidden rounded-full pb-[100%]">
+              <img
+                className="absolute inset-0"
+                src="./assets/images/profile.png"
+                alt="kenPachi[.design]"
+              />
+            </figure>
+          </div>
+          <div className="w-9/12">
+            <p className="mb-2 text-white">
+              <span className="font-bold">kenPachi[.design]</span>
+              <br />
+              音楽、WEBサイト・アプリケーション、デザイン、動画などを制作するクリエイター。
+              2023年にバーチャル・シンガー：初音ミクの楽曲を収録したCD・配信作品を発表。
+              アニメソング、歌謡曲、映画音楽、テーマパーク音楽、吹奏楽、ジャズなどから影響を受けている。
+              主に使用できる楽器はギターとコントラバス。
+              デザインワークにはAdobe製品を愛用。
+            </p>
+            <div>
+              <ul className="flex gap-4 text-themeYellow-500">
+                <li>
+                  <a href="https://twitter.com/kenPachi_design" target="_blank">
+                    [Twitter]
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@kenpachi.design"
+                    target="_blank"
+                  >
+                    [Youtube]
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.nicovideo.jp/user/576807"
+                    target="_blank"
+                  >
+                    [ニコニコ動画]
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="font-NotoSans mb-10 text-[0.725rem] text-white">
+          <p className="mb-3">
+            「初音ミク」はクリプトン・フューチャー・メディア株式会社の著作物です。
+            <br />
+            本WEBページの当該キャラクターの使用については次のリンク先のとおり、ピアプロリンク申請のもと非営利かつ有償の販促目的のため使用させていただいております。
+          </p>
+          <a
+            href="https://piapro.jp/product/?id=nmr8y4z3"
+            target="_blank"
+            className="inline-block max-w-[84px]"
+          >
+            <div className="inline-block w-full">
+              <img src="./assets/images/piaproqr.png" alt="" />
+            </div>
+          </a>
+        </div>
+        <div className="text-center ">
+          <figure className="inline-block max-w-[180px]">
+            <img src="./assets/images/logo.png" alt="" />
+          </figure>
+          <p className="font-NotoSans text-[0.725rem] text-themeYellow-500">
+            ©︎kenPachi[.design]
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 };
