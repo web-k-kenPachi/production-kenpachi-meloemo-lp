@@ -18,3 +18,39 @@ img {
   height: 100%;
   object-fit: cover;
 }
+
+.gradient-bg {
+  background: linear-gradient(
+    192.57deg,
+    #12c2e9 19.92%,
+    #c471ed 51.49%,
+    #f64f59 81.77%
+  );
+}
+
+.gradient-bg-promotion {
+  background: linear-gradient(36.61deg, #d586b5 0%, #87d0f4 100%);
+}
+
+.grid-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0px;
+  /* 方眼紙模様に必須のスタイル */
+  background-image: linear-gradient(
+      0deg,
+      transparent calc(100% - 1px),
+      #f0f0f0 calc(100% - 1px)
+    ),
+    linear-gradient(
+      90deg,
+      transparent calc(100% - 1px),
+      #f0f0f0 calc(100% - 1px)
+    );
+  background-size: 40px 40px;
+  background-repeat: repeat;
+  background-position: center center;
+  z-index: -1;
+  opacity: 0.4;
+}

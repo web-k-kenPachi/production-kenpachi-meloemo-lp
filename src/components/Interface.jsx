@@ -2,7 +2,9 @@ import AmazonMusic from './AmazonMusic';
 import AppleMusic from './AppleMusic';
 import { FeatureSlide } from './FeatureSlide';
 import Heart from './Heart';
+import Noise from './Noise';
 import Spotify from './Spotify';
+import { VideoArea } from './VideoArea';
 import YoutubeMusic from './YoutubeMusic';
 
 export const Interface = () => {
@@ -76,10 +78,10 @@ const HeroSection = () => {
           </div>
           <div className="absolute right-[14%] top-[calc(2rem-1%)]">
             <div className="flex flex-col gap-9 text-4xl [writing-mode:vertical-rl]">
-              <span className="w-fit bg-black p-2 text-white">
+              <span className="gradient-bg w-fit p-2 text-white">
                 心の琴線に触れる、
               </span>
-              <span className="w-fit bg-black p-2  text-white">
+              <span className="gradient-bg w-fit p-2  text-white">
                 えもいメロディー。
               </span>
             </div>
@@ -247,7 +249,102 @@ const FeatureSection = () => {
 const InfoSection = () => {
   return (
     <Section backgroundColor="bg-themeYellow-500">
-      <div className="test">INFOSection</div>
+      <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-20 py-12">
+        <h2 className="font-Anton text-themeRed-800 mb-32 text-6xl">
+          Information
+        </h2>
+        <div className="flex h-full w-full flex-row-reverse items-center justify-center">
+          <div className="flex h-full w-full flex-col items-start justify-center">
+            <h3 className="mb-8 flex flex-col">
+              <span className="font-Anton bg-themeRed-800 w-fit px-4 py-1 text-xl  text-white">
+                kenPachi[.design] 1st Mini Album
+              </span>
+              <span className="font-kaisei  text-themeRed-800 text-4xl font-bold">
+                めろえも！タッチ・ザ・ ハートストリングス
+              </span>
+            </h3>
+            <h4 className="text-themeRed-800 mb-4 text-3xl font-bold">
+              収録曲
+            </h4>
+            <ul className="text-themeRed-800 mb-8 text-2xl font-bold">
+              <li>01: 御伽街物語</li>
+              <li>02: it’s a sensitive personality</li>
+              <li>03: ピンキーメイデン</li>
+              <li>04: ハッピー☆シーサイド</li>
+              <li>05: 君は宇宙</li>
+            </ul>
+            {/* MUSIC LINK */}
+            <div className="">
+              <h4 className="text-themeRed-800 mb-6 text-3xl font-bold">
+                ＜配信先リンク＞
+              </h4>
+              <div className="mb-8 flex w-full items-center justify-between gap-16">
+                <a
+                  href="https://open.spotify.com/intl-ja/album/4AGvNA0mTGf8Zo6XDIJm7T"
+                  target="_blank"
+                >
+                  <Spotify />
+                </a>
+                <a
+                  href="https://music.apple.com/jp/album/melo-emo-touch-the-heartstrings-feat-hatsune-miku-ep/1683330803"
+                  target="_blank"
+                >
+                  <AppleMusic />
+                </a>
+                <a
+                  href="https://amazon.co.jp/music/player/albums/B0C2Y5BSW9?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_WArdoRj8XOip3x13ArHYPwLQE"
+                  target="_blank"
+                >
+                  <AmazonMusic />
+                </a>
+                <a
+                  href="https://music.youtube.com/playlist?list=OLAK5uy_nOzLvetgMZYXv8oE0oFdb7bLktlmVhfb4&si=Mfa8JZrJuuigeNax"
+                  target="_blank"
+                >
+                  <YoutubeMusic />
+                </a>
+              </div>
+              <div className="flex justify-end">
+                <a
+                  href="https://nodee.net/a/rv09dqc2"
+                  target="_blank"
+                  className="font-Anton text-5xl"
+                >
+                  Listen Now!
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="w-full"></div>
+        </div>
+      </div>
+      <div className="h-auto min-h-screen w-screen  px-20 py-12">
+        <h2 className="font-Anton text-themeRed-800 relative z-20 -mr-10 text-right text-6xl">
+          Promotion
+        </h2>
+        <div className="relative z-10 m-auto -mt-8 min-h-screen w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black">
+          <div className="gradient-bg-promotion absolute inset-0 -z-[1] h-full w-full"></div>
+          <Noise className="absolute inset-0 -z-[1] h-full w-full" />
+          <figure className="absolute left-[-4%] -z-[1] w-2/12">
+            <img src="./assets/svg/moji01.svg" alt="" />
+          </figure>
+          <figure className="absolute right-[4%] top-0 -z-[1] w-3/12">
+            <img src="./assets/svg/moji02.svg" alt="" />
+          </figure>
+          <figure className="absolute bottom-[1%] left-[-4%] -z-[1] w-6/12">
+            <img src="./assets/svg/moji03.svg" alt="" />
+          </figure>
+          <figure className="absolute bottom-[-4%] right-[-2%] -z-[1] w-5/12">
+            <img src="./assets/svg/moji04.svg" alt="" />
+          </figure>
+          <div className="grid-bg"></div>
+          {/* VIDEO */}
+          {/* VIDEO AREA */}
+          <div>
+            <VideoArea />
+          </div>
+        </div>
+      </div>
     </Section>
   );
 };

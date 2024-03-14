@@ -13,6 +13,7 @@
     "@designbycode/tailwindcss-text-stroke": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-modal-video": "^2.0.1",
     "swiper": "^11.0.7"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.12",
+    "sass": "^1.72.0",
     "tailwindcss": "^3.4.1",
     "vite": "^5.1.6"
   }

@@ -28,6 +28,7 @@ export default {
         },
         themeRed: {
           500: '#FD2662',
+          800: '#FF3A3A',
         },
       },
       fontFamily: {
