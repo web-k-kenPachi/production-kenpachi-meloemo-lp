@@ -7,7 +7,7 @@ import Play from './Play';
 export const VideoArea = () => {
   return (
     <>
-      <div className="m-auto flex h-full w-full max-w-[1100px] flex-col gap-[min(8rem,30vw)] px-8 py-60">
+      <div className="m-auto flex h-full w-full max-w-[1100px] flex-col gap-[min(8rem,30vw)] px-8 py-60 justify-center items-stretch">
         <ComponentVideo01 />
         <ComponentVideo02 />
       </div>

@@ -318,11 +318,11 @@ const InfoSection = () => {
           <div className="w-full"></div>
         </div>
       </div>
-      <div className="h-auto min-h-screen w-screen  px-20 py-12">
+      <div className="h-full min-h-screen w-screen px-20 py-12">
         <h2 className="font-Anton relative z-[11] -mr-10 text-right text-6xl text-themePink-500">
           Promotion
         </h2>
-        <div className="relative z-10 m-auto -mt-8 min-h-screen w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black">
+        <div className="relative z-10 m-auto -mt-8 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black">
           <div className="gradient-bg-promotion absolute inset-0 -z-[1] h-full w-full"></div>
           <Noise className="absolute inset-0 -z-[1] h-full w-full" />
           <figure className="absolute left-[-4%] -z-[1] w-2/12">
@@ -340,9 +340,7 @@ const InfoSection = () => {
           <div className="grid-bg"></div>
           {/* VIDEO */}
           {/* VIDEO AREA */}
-          <div>
-            <VideoArea />
-          </div>
+          <VideoArea />
         </div>
       </div>
     </Section>
