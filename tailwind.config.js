@@ -34,6 +34,10 @@ export default {
         Anton: "'Anton', 'sans-serif'",
         NotoSans: "'Noto Sans JP', 'sans-serif'",
         KaiseiDecol: "'Kaisei Decol', 'sans-serif'",
+        DotGothic: "'DotGothic16', 'sans-serif'",
+      },
+      boxShadow: {
+        lg: '0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);',
       },
     },
   },

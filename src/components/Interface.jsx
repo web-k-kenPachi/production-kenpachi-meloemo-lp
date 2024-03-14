@@ -1,4 +1,9 @@
+import AmazonMusic from './AmazonMusic';
+import AppleMusic from './AppleMusic';
+import { FeatureSlide } from './FeatureSlide';
 import Heart from './Heart';
+import Spotify from './Spotify';
+import YoutubeMusic from './YoutubeMusic';
 
 export const Interface = () => {
   return (
@@ -39,9 +44,7 @@ const HeroSection = () => {
                 </span>
                 <div className="mb-4">
                   <h1 className="text-4xl text-white">
-                    めろえも！タッチ・ザ・
-                    <br />
-                    ハートストリングス
+                    めろえも！タッチ・ザ・ハートストリングス
                   </h1>
                 </div>
                 <div>
@@ -120,7 +123,7 @@ const FeatureSection = () => {
         <div className="h-screen w-screen px-20 py-8">
           <div className="flex h-full w-full items-center justify-center">
             <div className="relative flex h-full w-full flex-col items-center justify-center">
-              <div className="absolute top-1/2 z-[-1] w-full -translate-y-[44%] px-14">
+              <div className="absolute top-[40%] z-[-1] w-full -translate-y-[30%]  px-14">
                 <Heart className="fill-themeRed-500" />
               </div>
               <h3 className="before:font-Anton before:text-stroke-1 before:text-stroke-fill-transparent before:text-stroke-white relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:text-[4em] before:opacity-50 before:content-['01']">
@@ -135,33 +138,108 @@ const FeatureSection = () => {
         <div className="h-screen w-screen px-20 py-8">
           <div className="flex h-full w-full flex-row-reverse items-center justify-center">
             <div className="relative flex h-full w-full flex-col items-center justify-center">
-              <div className="absolute top-1/2 z-[-1] w-full -translate-y-[44%] px-14">
+              <div className="absolute top-[20%] z-[-1] w-full px-14">
                 <Heart className="fill-themeRed-500" />
               </div>
-              <h3 className="before:font-Anton before:text-stroke-1 before:text-stroke-fill-transparent before:text-stroke-white relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:text-[4em] before:opacity-50 before:content-['02']">
-                「M3-2023春」にてCD頒布&各種音楽配信サービスでï配信開始！
+              <h3 className="before:font-Anton before:text-stroke-1 before:text-stroke-fill-transparent before:text-stroke-white relative mb-4 text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:text-[4em] before:opacity-50 before:content-['02']">
+                「M3-2023春」にてCD頒布&各種音楽配信サービスで配信開始！
               </h3>
+              {/* MUSIC LINK */}
+              <div className="">
+                <h4 className="mb-4">＜配信先リンク＞</h4>
+                <div className="mb-8 flex w-full items-center justify-between gap-16">
+                  <a
+                    href="https://open.spotify.com/intl-ja/album/4AGvNA0mTGf8Zo6XDIJm7T"
+                    target="_blank"
+                  >
+                    <Spotify />
+                  </a>
+                  <a
+                    href="https://music.apple.com/jp/album/melo-emo-touch-the-heartstrings-feat-hatsune-miku-ep/1683330803"
+                    target="_blank"
+                  >
+                    <AppleMusic />
+                  </a>
+                  <a
+                    href="https://amazon.co.jp/music/player/albums/B0C2Y5BSW9?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_WArdoRj8XOip3x13ArHYPwLQE"
+                    target="_blank"
+                  >
+                    <AmazonMusic />
+                  </a>
+                  <a
+                    href="https://music.youtube.com/playlist?list=OLAK5uy_nOzLvetgMZYXv8oE0oFdb7bLktlmVhfb4&si=Mfa8JZrJuuigeNax"
+                    target="_blank"
+                  >
+                    <YoutubeMusic />
+                  </a>
+                </div>
+                <div className="flex justify-end">
+                  <a
+                    href="https://nodee.net/a/rv09dqc2"
+                    target="_blank"
+                    className="font-Anton text-5xl"
+                  >
+                    Listen Now!
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="w-full"></div>
           </div>
         </div>
         {/* FEATURE SEPARATE */}
-        <div className=""></div>
+        <div className="relative after:absolute after:inset-0 after:-z-10 after:bg-black after:opacity-60 after:content-[''] ">
+          <figure className="absolute inset-0 -z-20">
+            <img
+              src="./assets/images/dummy-main.jpg"
+              className="object-[center_30%]"
+              alt=""
+            />
+          </figure>
+          <div className="font-DotGothic flex flex-nowrap items-center justify-start text-nowrap py-10 text-4xl text-themeYellow-500">
+            <h3>曲目：</h3>
+            <ul className="flex items-center justify-start gap-20">
+              <li>
+                <span>1.御伽街物語</span>
+              </li>
+              <li>
+                <span>2.it's a sensitive personality</span>
+              </li>
+              <li>
+                <span>3.ピンキーメイデン</span>
+              </li>
+              <li>
+                <span>4.ハッピー☆シーサイド</span>
+              </li>
+              <li>
+                <span>5.君は宇宙</span>
+              </li>
+            </ul>
+          </div>
+        </div>
         {/* FEATURE DESC 03 */}
-        <div className="h-screen w-screen px-20 py-8">
-          <div className="flex h-full w-full items-center justify-center">
-            <div className="flex h-full w-full flex-col items-center justify-center">
-              <h3 className="text-4xl">
-                初音ミクをボーカルに起用したkenPachi[.design]
-                自身初となるミニアルバム！
-              </h3>
+        <div className="flex h-screen w-screen flex-col justify-center ">
+          <div className="h-auto w-full px-20 py-20">
+            <div className="h-full w-full">
+              <div className="flex h-full w-full items-center justify-start">
+                <div className="relative flex h-full w-[calc(100%/8*6)] flex-col items-center justify-center">
+                  <div className="px-14: absolute left-0 top-[40%] z-[-1] w-full  max-w-[calc(100vw/6*2)] -translate-y-[30%]">
+                    <Heart className="fill-themeRed-500" />
+                  </div>
+                  <h3 className="before:font-Anton before:text-stroke-1 before:text-stroke-fill-transparent before:text-stroke-white relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:text-[4em] before:opacity-50 before:content-['03']">
+                    作詞・作曲・編曲者自身がジャケットデザイン・入稿作業・プロモーションも担当！
+                  </h3>
+                </div>
+              </div>
             </div>
-            <div className="w-full"></div>
+          </div>
+          <div className="h-auto w-full overflow-hidden">
+            <FeatureSlide />
           </div>
         </div>
       </div>
       {/* CIRCLE TEXT ART AREA */}
-      <div className=""></div>
+      <div className="">CIRCLETEXT</div>
     </Section>
   );
 };
