@@ -21,19 +21,24 @@ export const Interface = () => {
 
 const Section = (props) => {
   const { children, backgroundColor } = props;
-  return (
-    <section
-      className={`h-full w-full ${backgroundColor ? backgroundColor : ""}`}
-    >
-      {children}
-    </section>
-  );
+  return <section className="h-full w-full">{children}</section>;
 };
+
+// const Section = (props) => {
+//   const { children, backgroundColor } = props;
+//   return (
+//     <section
+//       className={`h-full w-full ${backgroundColor ? backgroundColor : ''}`}
+//     >
+//       {children}
+//     </section>
+//   );
+// };
 
 const HeroSection = () => {
   return (
     <Section backgroundColor="bg-themePink-500">
-      <div className="h-screen w-screen">
+      <div className="relative z-[1] h-screen w-screen" id="page-top">
         <div className="relative h-full w-full">
           <div className="h-full w-full px-20 py-8">
             <div className="relative h-full w-full">
@@ -45,7 +50,7 @@ const HeroSection = () => {
                 />
               </figure>
               <div className="absolute bottom-0 h-auto w-[calc(100%/8*3.5)]  max-w-[680px] rounded-tr-[2rem] bg-themePink-500 px-8 py-6">
-                <span className="font-Anton absolute -top-4 block bg-black px-2 py-1 text-2xl text-white">
+                <span className="absolute -top-4 block bg-black px-2 py-1 font-Anton text-2xl text-white">
                   kenPachi[.design] 1st Mini Album
                 </span>
                 <div className="mb-4">
@@ -102,7 +107,7 @@ const FeatureSection = () => {
       {/* FEATURE DETAIL AREA */}
       <div className="relative z-10 text-white">
         {/* FEATURE TEXT */}
-        <div className="font-Anton flex gap-8 text-[10rem] text-white">
+        <div className="flex gap-8 font-Anton text-[10rem] text-white">
           <span>Feature</span>
           <span>Feature</span>
           <span>Feature</span>
@@ -110,17 +115,17 @@ const FeatureSection = () => {
           <span>Feature</span>
         </div>
         {/* FEATURE MELOEMO TEXT */}
-        <div className="font-Anton absolute top-[100vh] -z-[1] flex -translate-y-1/2 -rotate-12 gap-8 whitespace-nowrap text-[10rem] text-white">
-          <span className="text-stroke-white text-stroke-fill-transparent text-stroke-1">
+        <div className="absolute top-[100vh] -z-[1] flex -translate-y-1/2 -rotate-12 gap-8 whitespace-nowrap font-Anton text-[10rem] text-white">
+          <span className="text-stroke-1 text-stroke-white text-stroke-fill-transparent">
             Melo Emo!!
           </span>
-          <span className="text-stroke-white text-stroke-fill-transparent text-stroke-1">
+          <span className="text-stroke-1 text-stroke-white text-stroke-fill-transparent">
             Melo Emo!!
           </span>
-          <span className="text-stroke-white text-stroke-fill-transparent text-stroke-1">
+          <span className="text-stroke-1 text-stroke-white text-stroke-fill-transparent">
             Melo Emo!!
           </span>
-          <span className="text-stroke-white text-stroke-fill-transparent text-stroke-1">
+          <span className="text-stroke-1 text-stroke-white text-stroke-fill-transparent">
             Melo Emo!!
           </span>
         </div>
@@ -132,7 +137,7 @@ const FeatureSection = () => {
               <div className="absolute top-[40%] z-[-1] w-full -translate-y-[30%]  px-14">
                 <Heart className="fill-themeRed-500" />
               </div>
-              <h3 className="before:font-Anton before:text-stroke-1 before:text-stroke-fill-transparent before:text-stroke-white relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:text-[4em] before:opacity-50 before:content-['01']">
+              <h3 className="relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['01'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent">
                 初音ミクをボーカルに起用したkenPachi[.design]
                 自身初となるミニアルバム！
               </h3>
@@ -147,7 +152,7 @@ const FeatureSection = () => {
               <div className="absolute top-[20%] z-[-1] w-full px-14">
                 <Heart className="fill-themeRed-500" />
               </div>
-              <h3 className="before:font-Anton before:text-stroke-1 before:text-stroke-fill-transparent before:text-stroke-white relative mb-4 text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:text-[4em] before:opacity-50 before:content-['02']">
+              <h3 className="relative mb-4 text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['02'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent">
                 「M3-2023春」にてCD頒布&各種音楽配信サービスで配信開始！
               </h3>
               {/* MUSIC LINK */}
@@ -194,7 +199,10 @@ const FeatureSection = () => {
           </div>
         </div>
         {/* FEATURE SEPARATE */}
-        <div className="relative after:absolute after:inset-0 after:-z-10 after:bg-black after:opacity-60 after:content-[''] ">
+        <div
+          className="relative after:absolute after:inset-0 after:-z-10 after:bg-black after:opacity-60 after:content-['']"
+          id="feature-scroll-end"
+        >
           <figure className="absolute inset-0 -z-20">
             <img
               src="./assets/images/dummy-main.jpg"
@@ -202,7 +210,7 @@ const FeatureSection = () => {
               alt=""
             />
           </figure>
-          <div className="font-DotGothic flex flex-nowrap items-center justify-start text-nowrap py-10 text-4xl text-themeYellow-500">
+          <div className="flex flex-nowrap items-center justify-start text-nowrap py-10 font-DotGothic text-4xl text-themeYellow-500">
             <h3>曲目：</h3>
             <ul className="flex items-center justify-start gap-20">
               <li>
@@ -232,7 +240,7 @@ const FeatureSection = () => {
                   <div className="px-14: absolute left-0 top-[40%] z-[-1] w-full  max-w-[calc(100vw/6*2)] -translate-y-[30%]">
                     <Heart className="fill-themeRed-500" />
                   </div>
-                  <h3 className="before:font-Anton before:text-stroke-1 before:text-stroke-fill-transparent before:text-stroke-white relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:text-[4em] before:opacity-50 before:content-['03']">
+                  <h3 className="relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['03'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent">
                     作詞・作曲・編曲者自身がジャケットデザイン・入稿作業・プロモーションも担当！
                   </h3>
                 </div>
@@ -245,7 +253,9 @@ const FeatureSection = () => {
         </div>
       </div>
       {/* CIRCLE TEXT ART AREA */}
-      <div className="">CIRCLETEXT</div>
+      <div className="" id="feature-end">
+        CIRCLETEXT
+      </div>
     </Section>
   );
 };
@@ -253,24 +263,27 @@ const FeatureSection = () => {
 const InfoSection = () => {
   return (
     <Section backgroundColor="bg-themeYellow-500">
-      <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-20 py-12">
-        <h2 className="font-Anton text-themeRed-800 mb-32 text-6xl">
+      <div
+        className="flex h-auto min-h-screen w-screen flex-col justify-center px-20 py-12"
+        id="battery"
+      >
+        <h2 className="mb-32 font-Anton text-6xl text-themeRed-800">
           Information
         </h2>
         <div className="flex h-full w-full flex-row-reverse items-center justify-center">
           <div className="flex h-full w-full flex-col items-start justify-center">
             <h3 className="mb-8 flex flex-col">
-              <span className="font-Anton bg-themeRed-800 w-fit px-4 py-1 text-xl  text-white">
+              <span className="w-fit bg-themeRed-800 px-4 py-1 font-Anton text-xl  text-white">
                 kenPachi[.design] 1st Mini Album
               </span>
-              <span className="font-kaisei  text-themeRed-800 text-4xl font-bold">
+              <span className="font-kaisei  text-4xl font-bold text-themeRed-800">
                 めろえも！タッチ・ザ・ ハートストリングス
               </span>
             </h3>
-            <h4 className="text-themeRed-800 mb-4 text-3xl font-bold">
+            <h4 className="mb-4 text-3xl font-bold text-themeRed-800">
               収録曲
             </h4>
-            <ul className="text-themeRed-800 mb-8 text-2xl font-bold">
+            <ul className="mb-8 text-2xl font-bold text-themeRed-800">
               <li>01: 御伽街物語</li>
               <li>02: it’s a sensitive personality</li>
               <li>03: ピンキーメイデン</li>
@@ -279,7 +292,7 @@ const InfoSection = () => {
             </ul>
             {/* MUSIC LINK */}
             <div className="">
-              <h4 className="text-themeRed-800 mb-6 text-3xl font-bold">
+              <h4 className="mb-6 text-3xl font-bold text-themeRed-800">
                 ＜配信先リンク＞
               </h4>
               <div className="mb-8 flex w-full items-center justify-between gap-16">
@@ -323,7 +336,7 @@ const InfoSection = () => {
         </div>
       </div>
       <div className="h-full min-h-screen w-screen px-20 py-12">
-        <h2 className="font-Anton relative z-[11] -mr-10 text-right text-6xl text-themePink-500">
+        <h2 className="relative z-[11] -mr-10 text-right font-Anton text-6xl text-themePink-500">
           Promotion
         </h2>
         <div className="relative z-10 m-auto -mt-8 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black">
@@ -360,10 +373,10 @@ const MessageSection = () => {
         </figure>
         <div className="flex h-auto min-h-screen w-screen justify-end px-20 py-12">
           <div className="w-4/6">
-            <h2 className="font-Anton -ml-8 text-6xl text-white mix-blend-difference">
+            <h2 className="-ml-8 font-Anton text-6xl text-white mix-blend-difference">
               MESSAGE
             </h2>
-            <div className="font-NotoSans -mt-10 rounded-lg bg-white px-10 py-20 leading-8">
+            <div className="-mt-10 rounded-lg bg-white px-10 py-20 font-NotoSans leading-8">
               <p className="mb-4">
                 このミニアルバムについてと「M3-2023春」での頒布を終えて。
               </p>
@@ -456,7 +469,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="font-NotoSans mb-10 text-[0.725rem] text-white">
+        <div className="mb-10 font-NotoSans text-[0.725rem] text-white">
           <p className="mb-3">
             「初音ミク」はクリプトン・フューチャー・メディア株式会社の著作物です。
             <br />
