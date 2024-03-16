@@ -1,6 +1,8 @@
 import { Canvas, useFrame } from '@react-three/fiber';
-import { View, OrthographicCamera, Preload } from '@react-three/drei';
+import { View, OrthographicCamera, Preload, Sphere } from '@react-three/drei';
 import { Background } from '../components/Background';
+import * as THREE from 'three';
+import { useRef } from 'react';
 
 export default function Scene() {
   return (
@@ -22,7 +24,6 @@ export default function Scene() {
       >
         <View.Port />
         <OrthographicCamera makeDefault position={[0, 0, 300]} zoom={1} />
-        {/* <Background /> */}
         <Preload all />
       </Canvas>
     </>

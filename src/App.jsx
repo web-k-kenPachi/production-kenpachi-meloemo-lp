@@ -14,6 +14,10 @@ import HeroImage from './components/HeroImage';
 function App() {
   return (
     <>
+      <div className="fixed top-0 -z-[100] h-screen w-screen bg-themePink-500"></div>
+      <div className="absolute top-0 -z-[1] h-screen w-screen">
+        <HeroImage />
+      </div>
       <div className="pointer-events-none z-10 h-screen w-screen bg-transparent">
         <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
           <ScrollControls pages={6} damping={0.1}>
@@ -28,9 +32,6 @@ function App() {
         </Canvas>
       </div>
       <Interface02 />
-      <div className="absolute top-0 -z-[1] h-screen w-screen">
-        <HeroImage />
-      </div>
     </>
   );
 }

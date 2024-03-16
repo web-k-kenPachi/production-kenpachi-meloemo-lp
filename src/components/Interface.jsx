@@ -37,7 +37,7 @@ const Section = (props) => {
 
 const HeroSection = () => {
   return (
-    <Section backgroundColor="bg-themePink-500">
+    <Section>
       <div className="relative z-[1] h-screen w-screen" id="page-top">
         <div className="relative h-full w-full">
           <div className="h-full w-full px-20 py-8">

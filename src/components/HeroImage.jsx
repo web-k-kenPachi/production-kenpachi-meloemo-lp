@@ -14,9 +14,9 @@ function InterfaceTest() {
 
   return (
     <>
-        <Scene />
-        <div>
-          {/* <div>
+      <Scene />
+      <div>
+        {/* <div>
           <nav>
             <span>Variations </span>
             <a
@@ -39,18 +39,19 @@ function InterfaceTest() {
               </a>
               </nav>
             </div> */}
-          <EmergingImage
-            type="2"
-            url="./assets/images/dummy-main.jpg"
-            className="absolute inset-0 aspect-[16/2]  h-full w-full"
-          />
-          {/* <div className="grid">
+        <EmergingImage
+          type="2"
+          url="./assets/images/dummy-main.jpg"
+          className="absolute inset-0 aspect-[16/2]  h-full w-full"
+        />
+
+        {/* <div className="grid">
           <figure className="grid__item">
           <div className="relative aspect-[16/9] h-auto w-full">
           </div>
           </figure>
         </div> */}
-        </div>
+      </div>
     </>
   );
 }
