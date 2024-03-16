@@ -315,6 +315,8 @@ const Footer = () => {
             <img src="./assets/images/logo.png" alt="" />
           </figure>
           <p className="font-NotoSans text-[0.725rem] text-themeYellow-500">
+            Character illust:めーすけ
+            <br />
             ©︎kenPachi[.design]
           </p>
         </div>

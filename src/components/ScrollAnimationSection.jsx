@@ -8,7 +8,7 @@ export const ScrollAnimationSection = () => {
   return (
     <>
       <HeroSection />
-      <FeatureSection />
+      <FeatureBeforeSection />
     </>
   );
 };
@@ -72,10 +72,10 @@ const HeroSection = () => {
   );
 };
 
-const FeatureSection = () => {
+const FeatureBeforeSection = () => {
   return (
     <>
-      <section className="relative h-screen w-screen">
+      <section className="relative h-screen  w-screen ">
         {/* FEATURE TEXT */}
         <div className="absolute top-1/2 z-10 flex -translate-y-1/2 gap-8 font-Anton text-[680px] text-white">
           <span>Feature</span>

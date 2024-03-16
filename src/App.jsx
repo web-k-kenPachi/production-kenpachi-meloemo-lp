@@ -7,7 +7,6 @@ import {
   ScrollControls,
   View,
 } from '@react-three/drei';
-import InterfaceTest from './components/InterfacTest';
 import HeroImage from './components/HeroImage';
 import { ScrollAnimationSection } from './components/ScrollAnimationSection';
 import { ContentSection } from './components/ContentSection';
@@ -18,8 +17,12 @@ function App() {
       <div className="absolute top-0 -z-[1] h-screen w-screen">
         <HeroImage />
       </div>
-      <div className="pointer-events-none z-10 h-screen w-screen bg-transparent">
-        <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
+      <div className="pointer-events-none relative z-50 h-screen w-screen bg-transparent">
+        <Canvas
+          shadows
+          camera={{ position: [0, 3, 10], fov: 42 }}
+          style={{ zIndex: 100 }}
+        >
           <ScrollControls pages={4} damping={0.01}>
             <ModelControl />
             <Scroll></Scroll>

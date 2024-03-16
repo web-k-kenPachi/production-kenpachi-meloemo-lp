@@ -2,7 +2,6 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { View, OrthographicCamera, Preload, Sphere } from '@react-three/drei';
 import { Background } from '../components/Background';
 import * as THREE from 'three';
-import { useRef } from 'react';
 
 export default function Scene() {
   return (
@@ -18,6 +17,7 @@ export default function Scene() {
           pointerEvents: 'none',
           overflow: 'hidden',
           clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
+          zIndex: '-50'
         }}
         eventSource={document.body}
       >
