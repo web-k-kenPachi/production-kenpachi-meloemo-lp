@@ -1,9 +1,16 @@
 import { Canvas } from '@react-three/fiber';
 import { Interface } from './components/Interface';
 import { ModelControl } from './components/ModelControl';
-import { Scroll, ScrollControls } from '@react-three/drei';
+import {
+  OrthographicCamera,
+  Preload,
+  Scroll,
+  ScrollControls,
+  View,
+} from '@react-three/drei';
 import Interface02 from './components/Interface02';
-
+import InterfaceTest from './components/InterfacTest';
+import HeroImage from './components/HeroImage';
 function App() {
   return (
     <>
@@ -14,11 +21,16 @@ function App() {
             <Scroll></Scroll>
             <Scroll html>
               <Interface />
+              {/* <InterfaceTest /> */}
             </Scroll>
           </ScrollControls>
+          <Preload all />
         </Canvas>
       </div>
       <Interface02 />
+      <div className='absolute w-screen h-screen'>
+        <HeroImage />
+      </div>
     </>
   );
 }

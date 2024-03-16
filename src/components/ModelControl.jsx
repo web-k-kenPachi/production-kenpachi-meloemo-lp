@@ -3,12 +3,15 @@ import {
   AdaptiveEvents,
   Environment,
   Lightformer,
+  OrthographicCamera,
+  View,
 } from '@react-three/drei';
 import { OrbitControls } from '@react-three/drei';
 import { ModelCDCase } from './ModelCDCase';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Background } from './Background';
+import EmergingImage from '../helper/EmergingImage';
 
 const Container = (props) => {
   const { children } = props;
