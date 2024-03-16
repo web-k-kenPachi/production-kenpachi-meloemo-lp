@@ -1,5 +1,4 @@
 import { Canvas } from '@react-three/fiber';
-import { Interface } from './components/Interface';
 import { ModelControl } from './components/ModelControl';
 import {
   OrthographicCamera,
@@ -8,30 +7,30 @@ import {
   ScrollControls,
   View,
 } from '@react-three/drei';
-import Interface02 from './components/Interface02';
 import InterfaceTest from './components/InterfacTest';
 import HeroImage from './components/HeroImage';
+import { ScrollAnimationSection } from './components/ScrollAnimationSection';
+import { ContentSection } from './components/ContentSection';
 function App() {
   return (
     <>
-      <div className="fixed top-0 -z-[100] h-screen w-screen bg-themePink-500"></div>
+      <div className="absolute top-0 -z-10 h-screen w-screen bg-themePink-500"></div>
       <div className="absolute top-0 -z-[1] h-screen w-screen">
         <HeroImage />
       </div>
       <div className="pointer-events-none z-10 h-screen w-screen bg-transparent">
         <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
-          <ScrollControls pages={6} damping={0.1}>
+          <ScrollControls pages={4} damping={0.01}>
             <ModelControl />
             <Scroll></Scroll>
             <Scroll html>
-              <Interface />
-              {/* <InterfaceTest /> */}
+              <ScrollAnimationSection />
             </Scroll>
           </ScrollControls>
           <Preload all />
         </Canvas>
       </div>
-      <Interface02 />
+      <ContentSection />
     </>
   );
 }

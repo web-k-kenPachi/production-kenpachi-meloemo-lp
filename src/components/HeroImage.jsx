@@ -1,8 +1,9 @@
 import { addEffect } from '@react-three/fiber';
 import EmergingImage from '../helper//EmergingImage';
 import Scene from '../helper/Scene';
+import { useState } from 'react';
 function InterfaceTest() {
-  // const [type, setType] = useState(0);
+  const [type, setType] = useState(0);
 
   // useEffect(() => {
   //   const nav = [...document.querySelectorAll('.frame__demos-item')];
@@ -40,9 +41,9 @@ function InterfaceTest() {
               </nav>
             </div> */}
         <EmergingImage
-          type="2"
+          type={type}
           url="./assets/images/dummy-main.jpg"
-          className="absolute inset-0 aspect-[16/2]  h-full w-full"
+          className="absolute inset-0 h-full w-full"
         />
 
         {/* <div className="grid">

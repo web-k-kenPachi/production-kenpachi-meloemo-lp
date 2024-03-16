@@ -8,7 +8,7 @@ export default function Scene() {
   return (
     <>
       <Canvas
-        className="overflow-hidden rounded-2xl px-20 py-8"
+        className="overflow-hidden"
         style={{
           position: 'relative',
           top: 0,
@@ -16,14 +16,13 @@ export default function Scene() {
           width: '100vw',
           height: '100vh',
           pointerEvents: 'none',
-          zIndex: '10',
           overflow: 'hidden',
-          borderRadius: '2rem',
+          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
         }}
         eventSource={document.body}
       >
         <View.Port />
-        <OrthographicCamera makeDefault position={[0, 0, 300]} zoom={1} />
+        <OrthographicCamera makeDefault position={[0, 0, 100]} zoom={1} />
         <Preload all />
       </Canvas>
     </>
