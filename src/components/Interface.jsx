@@ -42,13 +42,13 @@ const HeroSection = () => {
         <div className="relative h-full w-full">
           <div className="h-full w-full px-20 py-8">
             <div className="relative h-full w-full">
-              <figure className="absolute inset-0 h-full w-full overflow-hidden rounded-[2rem]">
+              {/* <figure className="absolute inset-0 h-full w-full overflow-hidden rounded-[2rem]">
                 <img
                   className="h-full w-full object-cover"
                   src="./assets/images/dummy-main.jpg"
                   alt=""
                 />
-              </figure>
+              </figure> */}
               <div className="absolute bottom-0 h-auto w-[calc(100%/8*3.5)]  max-w-[680px] rounded-tr-[2rem] bg-themePink-500 px-8 py-6">
                 <span className="absolute -top-4 block bg-black px-2 py-1 font-Anton text-2xl text-white">
                   kenPachi[.design] 1st Mini Album

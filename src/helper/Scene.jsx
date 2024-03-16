@@ -1,10 +1,12 @@
 import { Canvas, useFrame } from '@react-three/fiber';
 import { View, OrthographicCamera, Preload } from '@react-three/drei';
+import { Background } from '../components/Background';
 
 export default function Scene() {
   return (
     <>
       <Canvas
+        className="overflow-hidden rounded-2xl px-20 py-8"
         style={{
           position: 'relative',
           top: 0,
@@ -12,14 +14,15 @@ export default function Scene() {
           width: '100vw',
           height: '100vh',
           pointerEvents: 'none',
-          padding: '5rem',
-          zIndex: '10'
-
+          zIndex: '10',
+          overflow: 'hidden',
+          borderRadius: '2rem',
         }}
         eventSource={document.body}
       >
         <View.Port />
         <OrthographicCamera makeDefault position={[0, 0, 300]} zoom={1} />
+        {/* <Background /> */}
         <Preload all />
       </Canvas>
     </>

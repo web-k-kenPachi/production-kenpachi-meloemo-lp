@@ -28,7 +28,7 @@ function App() {
         </Canvas>
       </div>
       <Interface02 />
-      <div className='absolute w-screen h-screen'>
+      <div className="absolute top-0 -z-[1] h-screen w-screen">
         <HeroImage />
       </div>
     </>

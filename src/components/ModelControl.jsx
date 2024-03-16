@@ -27,7 +27,7 @@ export const ModelControl = () => {
   return (
     <>
       {/* <Container> */}
-      <Background />
+      {/* <Background /> */}
       <ambientLight intensity={0.4} />
       <directionalLight color="#ffffff" position={[0, 1, 4]} intensity={0.5} />
       <spotLight
