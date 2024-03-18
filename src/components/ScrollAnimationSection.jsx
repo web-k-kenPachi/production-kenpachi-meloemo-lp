@@ -15,8 +15,8 @@ export const ScrollAnimationSection = () => {
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-screen">
-      <div className="relative z-[1] h-screen w-screen" id="page-top">
+    <section className="absolute top-0 h-screen w-screen">
+      <div className="relative z-[1] h-screen w-screen">
         <div className="relative h-full w-full">
           <div className="h-full w-full px-20 py-8">
             <div className="relative h-full w-full">
@@ -77,7 +77,7 @@ const FeatureBeforeSection = () => {
     <>
       <section className="relative h-screen  w-screen ">
         {/* FEATURE TEXT */}
-        <div className="absolute top-1/2 z-10 flex -translate-y-1/2 gap-8 font-Anton text-[680px] text-white">
+        <div className="absolute top-1/2 z-10 flex -translate-y-1/2 gap-8 font-Anton text-[680px] text-transparent text-stroke-2 text-stroke-white">
           <span>Feature</span>
           <span>Feature</span>
           <span>Feature</span>
@@ -109,7 +109,7 @@ const FeatureBeforeSection = () => {
             <div className="absolute top-[40%] z-[-1] w-full -translate-y-[30%]  px-14">
               <Heart className="fill-themeRed-500" />
             </div>
-            <h3 className="relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['01'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent">
+            <h3 className="relative text-4xl text-white before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['01'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent">
               初音ミクをボーカルに起用したkenPachi[.design]
               自身初となるミニアルバム！
             </h3>
@@ -117,14 +117,14 @@ const FeatureBeforeSection = () => {
           <div className="w-full"></div>
         </div>
       </section>
-      <section className="h-screen w-screen">
+      <section className="h-screen w-screen" id="feature-scroll-end">
         {/* FEATURE DESC 02 */}
         <div className="flex h-full w-full flex-row-reverse items-center justify-center  px-20 py-8">
           <div className="relative flex h-full w-full flex-col items-center justify-center">
             <div className="absolute top-[20%] z-[-1] w-full px-14">
               <Heart className="fill-themeRed-500" />
             </div>
-            <h3 className="relative mb-4 text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['02'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent">
+            <h3 className=" relative mb-4 text-4xl text-white before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['02'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent">
               「M3-2023春」にてCD頒布&各種音楽配信サービスで配信開始！
             </h3>
             {/* MUSIC LINK */}

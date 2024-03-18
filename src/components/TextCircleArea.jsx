@@ -7,10 +7,10 @@ import {
   AdaptiveDpr,
   AdaptiveEvents,
   Environment,
+  Float,
   OrbitControls,
   Preload,
 } from '@react-three/drei';
-import { ModelControl } from './ModelControl';
 import { ModelCDCase } from './ModelCDCase';
 
 const randomNumber = (min, max) =>
@@ -75,7 +75,7 @@ export const TextCircleArea = () => {
 
   return (
     <div
-      className="relative h-[calc(100vh*2)] w-screen cursor-grab bg-themePink-500 active:cursor-grabbing"
+      className="relative z-20 h-[calc(100vh*2)] w-screen cursor-grab bg-themePink-500 active:cursor-grabbing"
       ref={circlesText}
     >
       <Canvas
@@ -95,7 +95,9 @@ export const TextCircleArea = () => {
         />
         <Environment preset="city" />
         <Suspense fallback={null}>
-          <ModelCDCase scale={6} />
+          <Float speed={3} rotationIntensity={2} floatIntensity={0.5}>
+            <ModelCDCase scale={6} />
+          </Float>
         </Suspense>
         <AdaptiveDpr pixelated />
         <AdaptiveEvents />

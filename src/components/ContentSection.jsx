@@ -26,10 +26,7 @@ const FeatureAfterSection = () => {
       {/* FEATURE DETAIL AREA */}
       <div className="relative z-10 bg-themePink-500  text-white">
         {/* FEATURE SEPARATE */}
-        <div
-          className="relative after:absolute after:inset-0 after:-z-10 after:bg-black after:opacity-60 after:content-['']"
-          id="feature-scroll-end"
-        >
+        <div className="relative after:absolute after:inset-0 after:-z-10 after:bg-black after:opacity-60 after:content-['']">
           <figure className="absolute inset-0 -z-20">
             <img
               src="./assets/images/dummy-main.jpg"
