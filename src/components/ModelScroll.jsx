@@ -11,16 +11,15 @@ import {
 import { ModelCDCaseScroll } from './ModelCDCaseScroll';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Background } from './Background';
 
 export const ModelScroll = () => {
   return (
     <div
       className="pointer-events-none z-10 h-screen w-screen bg-transparent"
       id="page-top"
+      style={{ filter: 'brightness(1.15) saturate(1.25)' }}
     >
-      {/* <Background /> */}
-      <Canvas>
+      <Canvas style={{ pointerEvents: 'none' }}>
         <ambientLight intensity={1.1} />
         <spotLight
           position={[1.5, 1, 0]}

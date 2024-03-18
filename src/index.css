@@ -54,3 +54,7 @@ img {
   z-index: -1;
   opacity: 0.4;
 }
+
+.pin-spacer {
+  pointer-events: none;
+}
