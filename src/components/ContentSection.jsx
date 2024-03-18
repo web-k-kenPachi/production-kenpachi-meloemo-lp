@@ -4,6 +4,7 @@ import { FeatureSlide } from './FeatureSlide';
 import Heart from './Heart';
 import Noise from './Noise';
 import Spotify from './Spotify';
+import { TextCircleArea } from './TextCircleArea';
 import { VideoArea } from './VideoArea';
 import YoutubeMusic from './YoutubeMusic';
 
@@ -11,6 +12,7 @@ export const ContentSection = () => {
   return (
     <>
       <FeatureAfterSection />
+      <TextCircleArea />
       <InfoSection />
       <MessageSection />
       <Footer />
@@ -75,10 +77,6 @@ const FeatureAfterSection = () => {
           <div className="h-auto w-full overflow-hidden">
             <FeatureSlide />
           </div>
-        </div>
-        {/* CIRCLE TEXT ART AREA */}
-        <div className="" id="feature-end">
-          CIRCLETEXT
         </div>
       </div>
     </section>
