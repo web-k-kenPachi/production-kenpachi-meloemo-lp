@@ -9,35 +9,35 @@ import { useGLTF, PerspectiveCamera } from '@react-three/drei';
 
 export const ModelCDCase = ({ ...props }) => {
   const group = useRef();
-  const { nodes, materials } = useGLTF('./model/compressed-transformed.glb');
+  const { nodes, materials } = useGLTF('./model/model-cd-case.glb');
 
   return (
-    <group {...props} dispose={null} ref={group}>
+    <group {...props} dispose={null}>
       {/* <PerspectiveCamera
+        makeDefault={false}
         far={2}
-        near={100}
-        fov={0}
-        position={[0,0,0]}
-        rotation={[0, 0, 0]}
+        near={0}
+        fov={45}
+        position={[-2.864, 0.02, 2.759]}
+        rotation={[0.242, -0.661, 0.15]}
       /> */}
       <mesh
         geometry={nodes.cdCase_closed_shell_down.geometry}
         material={materials.pla}
+        position={[0, -0.1, -0.023]}
       />
       <mesh
         geometry={nodes.cdCase_closed_shell_up.geometry}
         material={materials.glass}
-      />
-      <mesh
-        geometry={nodes.cdCase_closed_blackDisc.geometry}
-        material={materials.cdCase_closed_blackPlastic_Mat}
+        position={[0, -0.1, -0.023]}
       />
       <mesh
         geometry={nodes.cdCase_closed_poster.geometry}
         material={materials.cdCase_closed_poster_Mat}
+        position={[0, -0.1, -0.03]}
       />
     </group>
   );
 };
 
-useGLTF.preload('./model/compressed-transformed.glb');
+useGLTF.preload('./model/model-cd-case.glb');

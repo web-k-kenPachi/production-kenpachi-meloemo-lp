@@ -75,31 +75,27 @@ export const TextCircleArea = () => {
 
   return (
     <div
-      className="relative h-[calc(100vh*2)] w-screen bg-themePink-500"
+      className="relative h-[calc(100vh*2)] w-screen cursor-grab bg-themePink-500 active:cursor-grabbing"
       ref={circlesText}
     >
       <Canvas
         shadows
-        camera={{ position: [0, 3, 10], fov: 42 }}
-        style={{ zIndex: 100 }}
+        camera={{ position: [0, 0, 10], fov: 42 }}
+        style={{ zIndex: 100, filter: 'brightness(1.15) saturate(1.25)' }}
       >
-        <ambientLight intensity={0.4} />
-        <directionalLight
-          color="#ffffff"
-          position={[0, 1, 4]}
-          intensity={0.5}
-        />
+        <ambientLight intensity={1.1} />
+        {/* <directionalLight color="#fff" position={[-4, 7, 2]} intensity={1} /> */}
         <spotLight
-          position={[0, 0, -5]}
-          angle={-1.3}
+          position={[1.5, 1, 0]}
+          angle={3.5}
           penumbra={1}
           castShadow
-          intensity={10}
+          intensity={1}
           shadow-bias={-0.0001}
         />
-        <Environment preset="warehouse" />
+        <Environment preset="city" />
         <Suspense fallback={null}>
-          <ModelCDCase scale={5} />
+          <ModelCDCase scale={6} />
         </Suspense>
         <AdaptiveDpr pixelated />
         <AdaptiveEvents />
