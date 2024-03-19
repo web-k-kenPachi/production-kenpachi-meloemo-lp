@@ -161,7 +161,7 @@ const InfoSection = () => {
         </h2>
         <div className="relative z-10 m-auto -mt-8 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black">
           <div className="gradient-bg-promotion absolute inset-0 -z-[1] h-full w-full"></div>
-          <Noise className="absolute inset-0 -z-[1] h-full w-full" />
+          <Noise className="absolute inset-0 -z-[1] h-full w-full mix-blend-screen" />
           <figure className="absolute left-[-4%] -z-[1] w-2/12">
             <img src="./assets/svg/moji01.svg" alt="" />
           </figure>
