@@ -2,10 +2,17 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { View, OrthographicCamera, Preload, Sphere } from '@react-three/drei';
 import { Background } from '../components/Background';
 import * as THREE from 'three';
+import BgGrid from '../components/BgGrid';
 
 export default function Scene() {
   return (
     <>
+      <BgGrid
+        className="absolute h-full w-full overflow-hidden"
+        style={{
+          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
+        }}
+      />
       <Canvas
         className="overflow-hidden"
         style={{
@@ -17,7 +24,7 @@ export default function Scene() {
           pointerEvents: 'none',
           overflow: 'hidden',
           clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
-          zIndex: '-50'
+          zIndex: '-50',
         }}
         eventSource={document.body}
       >

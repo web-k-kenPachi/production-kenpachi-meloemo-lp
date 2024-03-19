@@ -42,7 +42,7 @@ function InterfaceTest() {
           </nav>
         </div> */}
         <EmergingImage
-          type={2}
+          type={4}
           url="./assets/images/visual-gif-anim.gif"
           className="absolute inset-0 h-full w-full"
         />

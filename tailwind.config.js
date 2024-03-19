@@ -17,7 +17,6 @@ export default {
     extend: {
       colors: {
         themeYellow: {
-          300: '#FFF245',
           500: '#FFF245',
         },
         themePink: {

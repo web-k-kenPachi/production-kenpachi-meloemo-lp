@@ -9,7 +9,7 @@ const EmergeMaterial = shaderMaterial(
     uFillColor: new THREE.Color("#f60"),
     uProgress: 0,
     uPixels: null,
-    uType: 0,
+    uType: 4,
     uTexture: null,
     uTextureSize: null,
     uElementSize: null,
@@ -203,22 +203,22 @@ const EmergeMaterial = shaderMaterial(
           float lines = PristineGrid(vUv * gridSize, vec2(0.2*(1.-uProgress)));
 
 
-          // discard - slide in animation
-          float discardProgress = map(uProgress,0.,0.8,0.,1.);
-          if(vUv.x>cubicOut(discardProgress)) discard;
+          // discard - slide in animation スライドアニメーションを消す
+          // float discardProgress = map(uProgress,0.,0.8,0.,1.);
+          // if(vUv.x>cubicOut(discardProgress)) discard;
 
 
           // fill color
           vec3 fillColor = uFillColor;
           float gradWidth = mix(0.4,0.2,uProgress);
           float customProg = map(cubicInOut(uProgress), 0.0, 1., -gradWidth, 1. - gradWidth);
-          float fillGradient = smoothstep(customProg, customProg+gradWidth, vUv.x);
+          // float fillGradient = smoothstep(customProg, customProg+gradWidth, vUv.x);
 
 
 
           gl_FragColor.a = 1.;
           gl_FragColor.rgb = blendNormal(vec3(1.-lines),color.rgb , 0.9);
-          gl_FragColor.rgb = mix( gl_FragColor.rgb,fillColor, fillGradient);
+          // gl_FragColor.rgb = mix( gl_FragColor.rgb,fillColor, fillGradient); 端の不透明を消す
           gl_FragColor.rgb = mix( gl_FragColor.rgb,defaultColor.rgb, finalProgress);
 
 
