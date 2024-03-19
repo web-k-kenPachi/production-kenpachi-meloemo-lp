@@ -3,16 +3,29 @@ import { View, OrthographicCamera, Preload, Sphere } from '@react-three/drei';
 import { Background } from '../components/Background';
 import * as THREE from 'three';
 import BgGrid from '../components/BgGrid';
+import Noise from '../components/Noise';
 
 export default function Scene() {
   return (
     <>
-      <BgGrid
-        className="absolute h-full w-full overflow-hidden"
+      <Noise
+        className="absolute h-full w-full overflow-hidden opacity-35"
         style={{
           clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
         }}
       />
+      <BgGrid
+        className="absolute h-full w-full overflow-hidden opacity-40"
+        style={{
+          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
+        }}
+      />
+      <div
+        className="absolute z-[-51] h-full w-full overflow-hidden bg-themeYellow-500 "
+        style={{
+          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
+        }}
+      ></div>
       <Canvas
         className="overflow-hidden"
         style={{

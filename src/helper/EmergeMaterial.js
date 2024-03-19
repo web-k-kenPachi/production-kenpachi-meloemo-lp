@@ -9,7 +9,7 @@ const EmergeMaterial = shaderMaterial(
     uFillColor: new THREE.Color("#f60"),
     uProgress: 0,
     uPixels: null,
-    uType: 4,
+    uType: 0,
     uTexture: null,
     uTextureSize: null,
     uElementSize: null,
@@ -203,7 +203,7 @@ const EmergeMaterial = shaderMaterial(
           float lines = PristineGrid(vUv * gridSize, vec2(0.2*(1.-uProgress)));
 
 
-          // discard - slide in animation スライドアニメーションを消す
+          // discard - slide in animation コメントアウトでスライドアニメーションを消す
           // float discardProgress = map(uProgress,0.,0.8,0.,1.);
           // if(vUv.x>cubicOut(discardProgress)) discard;
 
@@ -218,7 +218,7 @@ const EmergeMaterial = shaderMaterial(
 
           gl_FragColor.a = 1.;
           gl_FragColor.rgb = blendNormal(vec3(1.-lines),color.rgb , 0.9);
-          // gl_FragColor.rgb = mix( gl_FragColor.rgb,fillColor, fillGradient); 端の不透明を消す
+          // gl_FragColor.rgb = mix( gl_FragColor.rgb,fillColor, fillGradient); コメントアウトで端の不透明を消す
           gl_FragColor.rgb = mix( gl_FragColor.rgb,defaultColor.rgb, finalProgress);
 
 

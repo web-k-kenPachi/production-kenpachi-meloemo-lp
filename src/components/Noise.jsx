@@ -1,7 +1,7 @@
 const Noise = (props) => {
-  const { className } = props;
+  const { className, style } = props;
   return (
-    <svg className={className} xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} style={style} xmlns="http://www.w3.org/2000/svg">
       <filter id="noiseFilter">
         <feTurbulence
           type="fractalNoise"
