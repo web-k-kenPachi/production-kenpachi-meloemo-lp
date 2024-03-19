@@ -2,6 +2,7 @@ import AmazonMusic from './AmazonMusic';
 import AppleMusic from './AppleMusic';
 import { FeatureSlide } from './FeatureSlide';
 import Heart from './Heart';
+import InfiniteTrackSlide from './InfiniteTrackSlide';
 import Noise from './Noise';
 import Spotify from './Spotify';
 import { TextCircleArea } from './TextCircleArea';
@@ -26,35 +27,7 @@ const FeatureAfterSection = () => {
       {/* FEATURE DETAIL AREA */}
       <div className="relative z-10 bg-themePink-500  text-white">
         {/* FEATURE SEPARATE */}
-        <div className="relative after:absolute after:inset-0 after:-z-10 after:bg-black after:opacity-60 after:content-['']">
-          <figure className="absolute inset-0 -z-20">
-            <img
-              src="./assets/images/dummy-main.jpg"
-              className="object-[center_30%]"
-              alt=""
-            />
-          </figure>
-          <div className="flex flex-nowrap items-center justify-start text-nowrap py-10 font-DotGothic text-4xl text-themeYellow-500">
-            <h3>曲目：</h3>
-            <ul className="flex items-center justify-start gap-20">
-              <li>
-                <span>1.御伽街物語</span>
-              </li>
-              <li>
-                <span>2.it's a sensitive personality</span>
-              </li>
-              <li>
-                <span>3.ピンキーメイデン</span>
-              </li>
-              <li>
-                <span>4.ハッピー☆シーサイド</span>
-              </li>
-              <li>
-                <span>5.君は宇宙</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <InfiniteTrackSlide />
         {/* FEATURE DESC 03 */}
         <div className="flex h-screen w-screen flex-col justify-center ">
           <div className="h-auto w-full px-20 py-20">

@@ -1,7 +1,8 @@
 import { addEffect } from '@react-three/fiber';
 import EmergingImage from '../helper//EmergingImage';
 import Scene from '../helper/Scene';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Noise from './Noise';
 function InterfaceTest() {
   const [type, setType] = useState(0);
 
@@ -23,26 +24,26 @@ function InterfaceTest() {
             <a
               className="frame__demos-item is-active"
               onClick={() => setType(0)}
-              >
+            >
               1
-              </a>
-              <a className="frame__demos-item" onClick={() => setType(1)}>
+            </a>
+            <a className="frame__demos-item" onClick={() => setType(1)}>
               2
-              </a>
-              <a className="frame__demos-item" onClick={() => setType(2)}>
+            </a>
+            <a className="frame__demos-item" onClick={() => setType(2)}>
               3
-              </a>
-              <a className="frame__demos-item" onClick={() => setType(3)}>
+            </a>
+            <a className="frame__demos-item" onClick={() => setType(3)}>
               4
-              </a>
-              <a className="frame__demos-item" onClick={() => setType(4)}>
+            </a>
+            <a className="frame__demos-item" onClick={() => setType(4)}>
               5
-              </a>
-              </nav>
-            </div> */}
+            </a>
+          </nav>
+        </div> */}
         <EmergingImage
-          type={type}
-          url="./assets/images/dummy-main.jpg"
+          type={2}
+          url="./assets/images/visual-gif-anim.gif"
           className="absolute inset-0 h-full w-full"
         />
 
