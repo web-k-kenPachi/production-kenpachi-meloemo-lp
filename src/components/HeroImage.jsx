@@ -15,7 +15,7 @@ function InterfaceTest() {
   // typeは0〜4で指定
 
   return (
-    <>
+    <div className="absolute top-0 -z-[1] h-screen w-screen">
       <Scene />
       <div>
         {/* <div>
@@ -43,7 +43,7 @@ function InterfaceTest() {
         </div> */}
         <EmergingImage
           type={4}
-          url="./assets/images/visual-gif-anim.gif"
+          url="./assets/images/main-screen.jpg"
           className="absolute inset-0 h-full w-full"
         />
 
@@ -54,7 +54,7 @@ function InterfaceTest() {
           </figure>
         </div> */}
       </div>
-    </>
+    </div>
   );
 }
 

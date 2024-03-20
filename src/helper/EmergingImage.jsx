@@ -45,11 +45,10 @@ export default function EmergingImage({ ...props }) {
     if (refMesh?.material) {
       gsap.to(refMesh.material, {
         uProgress: isIntersecting ? 1 : 0,
-        duration: 3,
+        duration: 5,
         ease: 'none',
         repeat: -1,
-        repeatDelay: 3,
-        yoyo: true,
+        repeatDelay: 4,
       });
     }
   }, [isIntersecting, props.type]);

@@ -4,6 +4,7 @@ import { Background } from '../components/Background';
 import * as THREE from 'three';
 import BgGrid from '../components/BgGrid';
 import Noise from '../components/Noise';
+import { motion } from 'framer-motion';
 
 export default function Scene() {
   return (
@@ -14,12 +15,41 @@ export default function Scene() {
           clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
         }}
       />
-      <BgGrid
+      {/* <BgGrid
         className="absolute h-full w-full overflow-hidden opacity-40"
         style={{
           clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
         }}
-      />
+      /> */}
+      <div
+        className="absolute z-10 h-full w-full  overflow-hidden mix-blend-difference"
+        style={{
+          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
+        }}
+      >
+        <motion.div
+          className="absolute ml-[5rem] mt-[2rem] flex h-full items-start justify-center text-nowrap font-DotGothic text-[30vw] font-bold text-white"
+          animate={{
+            x: ['0%', '-50%'],
+            transition: {
+              ease: 'linear',
+              duration: 30,
+              repeat: Infinity,
+            },
+          }}
+        >
+          <div className="w-[50%] flex-shrink-0">
+            <div className="flex h-full flex-col items-center justify-center">
+              Melo-Emo! Touch the Heartstrings
+            </div>
+          </div>
+          <div className="w-[50%] flex-shrink-0">
+            <div className="flex h-full flex-col items-center justify-center">
+              Melo-Emo! Touch the Heartstrings
+            </div>
+          </div>
+        </motion.div>
+      </div>
       <div
         className="absolute z-[-51] h-full w-full overflow-hidden bg-themeYellow-500 "
         style={{
@@ -27,7 +57,7 @@ export default function Scene() {
         }}
       ></div>
       <Canvas
-        className="overflow-hidden"
+        className="overflow-hidden blur-[1px]"
         style={{
           position: 'relative',
           top: 0,

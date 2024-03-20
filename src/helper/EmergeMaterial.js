@@ -6,10 +6,10 @@ import * as THREE from "three";
 const EmergeMaterial = shaderMaterial(
   {
     uTime: 0,
-    uFillColor: new THREE.Color("#f60"),
+    uFillColor: new THREE.Color('#f60'),
     uProgress: 0,
     uPixels: null,
-    uType: 0,
+    uType: 4,
     uTexture: null,
     uTextureSize: null,
     uElementSize: null,
@@ -183,7 +183,7 @@ const EmergeMaterial = shaderMaterial(
         if(uType==0.){
 
 
-          // pixelize
+          // pixelsize
           float pixelateProgress = map(uProgress,0.3,1.,0.,1.);
           pixelateProgress = floor(pixelateProgress*12.)/12.;
           float s = floor(mix(11., 50.,quadraticOut(pixelateProgress)));
@@ -212,7 +212,7 @@ const EmergeMaterial = shaderMaterial(
           vec3 fillColor = uFillColor;
           float gradWidth = mix(0.4,0.2,uProgress);
           float customProg = map(cubicInOut(uProgress), 0.0, 1., -gradWidth, 1. - gradWidth);
-          // float fillGradient = smoothstep(customProg, customProg+gradWidth, vUv.x);
+          // float fillGradient = smoothstep(customProg, customProg+gradWidth, vUv.x); 端の色の反映消す
 
 
 
@@ -322,7 +322,8 @@ const EmergeMaterial = shaderMaterial(
         }
         else if(uType==4.){
           int indexProgress = int(uProgress*36.);
-          float pixellation = floor(uElementSize.x*uPixels[indexProgress]);
+          // float pixellation = floor(uElementSize.x*uPixels[indexProgress]); 元のサイズ
+          float pixellation = floor(uElementSize.x*uPixels[indexProgress]*0.5);
 
           vec2 gridSize = vec2(
             pixellation,
@@ -333,11 +334,11 @@ const EmergeMaterial = shaderMaterial(
           gl_FragColor = color;
         }
 
-        gl_FragColor.rgb = pow(gl_FragColor.rgb,vec3(1./2.2));
+        gl_FragColor.rgb = pow(gl_FragColor.rgb,vec3(1./0.9));
 
 
       }
-    `
+    `,
 );
 
 // declaratively
