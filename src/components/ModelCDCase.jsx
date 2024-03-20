@@ -13,14 +13,6 @@ export const ModelCDCase = ({ ...props }) => {
 
   return (
     <group {...props} dispose={null}>
-      {/* <PerspectiveCamera
-        makeDefault={false}
-        far={2}
-        near={0}
-        fov={45}
-        position={[-2.864, 0.02, 2.759]}
-        rotation={[0.242, -0.661, 0.15]}
-      /> */}
       <mesh
         geometry={nodes.cdCase_closed_shell_down.geometry}
         material={materials.pla}
