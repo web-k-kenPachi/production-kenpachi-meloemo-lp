@@ -31,7 +31,6 @@ const InfiniteTrackSlide = () => {
           animate={{
             x: ['0%', '-500%'],
             transition: {
-              ease: 'linear',
               duration: 30,
               repeat: Infinity,
             },
