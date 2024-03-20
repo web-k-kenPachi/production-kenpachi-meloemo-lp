@@ -14,9 +14,9 @@ const InfiniteTrackSlide = () => {
   // const duplicatedSlides = [...trackList, ...trackList];
 
   return (
-    <div className="relative h-60 after:absolute after:inset-0 after:-z-10 after:bg-themePink-500 after:opacity-50 after:mix-blend-screen after:content-['']">
-      <Noise className="absolute  -z-10 h-full w-full opacity-70" />
-      <BgGrid className="absolute z-50 h-full w-full overflow-hidden opacity-80 mix-blend-difference" />
+    <div className="relative h-60 after:absolute after:inset-0 after:-z-10 after:bg-black after:opacity-75  after:content-['']">
+      <Noise className="pointer-events-none  absolute -z-10 h-full w-full opacity-70" />
+      <BgGrid className="pointer-events-none absolute z-50 h-full w-full  overflow-hidden mix-blend-screen" />
       <figure className="absolute inset-0 -z-20">
         <img
           src="./assets/images/visual-gif-anim.gif"
