@@ -1,6 +1,10 @@
 import AmazonMusic from './AmazonMusic';
 import AppleMusic from './AppleMusic';
 import Heart from './Heart';
+import {
+  MotionTextFeature,
+  MotionTextMeloEmo,
+} from './MotionTextInfiniteMaterial';
 import Spotify from './Spotify';
 import YoutubeMusic from './YoutubeMusic';
 
@@ -82,33 +86,14 @@ const HeroSection = () => {
 const FeatureBeforeSection = () => {
   return (
     <>
+      {/* FEATURE Display TEXT */}
       <section className="relative h-screen  w-screen ">
-        {/* FEATURE TEXT */}
-        <div className="absolute top-1/2 z-10 flex -translate-y-1/2 gap-8 font-Anton text-[680px] text-transparent text-stroke-2 text-stroke-white">
-          <span>Feature</span>
-          <span>Feature</span>
-          <span>Feature</span>
-          <span>Feature</span>
-          <span>Feature</span>
-        </div>
+        <MotionTextFeature />
       </section>
       <section className="relative h-screen w-screen">
         {/* FEATURE DETAIL AREA */}
-        {/* FEATURE MELOEMO TEXT */}
-        <div className="absolute top-[100vh] -z-[1] flex -translate-y-1/2 -rotate-12 gap-8 whitespace-nowrap font-Anton text-[10rem] text-white">
-          <span className="text-stroke-1 text-stroke-white text-stroke-fill-transparent">
-            Melo Emo!!
-          </span>
-          <span className="text-stroke-1 text-stroke-white text-stroke-fill-transparent">
-            Melo Emo!!
-          </span>
-          <span className="text-stroke-1 text-stroke-white text-stroke-fill-transparent">
-            Melo Emo!!
-          </span>
-          <span className="text-stroke-1 text-stroke-white text-stroke-fill-transparent">
-            Melo Emo!!
-          </span>
-        </div>
+        {/* Meloemo Display TEXT */}
+        <MotionTextMeloEmo />
         {/* FEATURE DESC */}
         {/* FEATURE DESC 01 */}
         <div className="flex h-full w-full items-center justify-center  px-20 py-8">
