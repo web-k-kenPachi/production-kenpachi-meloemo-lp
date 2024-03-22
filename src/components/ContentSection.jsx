@@ -1,5 +1,6 @@
 import AmazonMusic from './AmazonMusic';
 import AppleMusic from './AppleMusic';
+import ButtonLink from './ButtonLink';
 import { FeatureSlide } from './FeatureSlide';
 import Heart from './Heart';
 import InfiniteTrackSlide from './InfiniteTrackSlide';
@@ -8,16 +9,17 @@ import Spotify from './Spotify';
 import { TextCircleArea } from './TextCircleArea';
 import { VideoArea } from './VideoArea';
 import YoutubeMusic from './YoutubeMusic';
+import { motion } from 'framer-motion';
 
 export const ContentSection = () => {
   return (
-    <>
+    <div className="relative z-50">
       <FeatureAfterSection />
       <TextCircleArea />
       <InfoSection />
       <MessageSection />
       <Footer />
-    </>
+    </div>
   );
 };
 
@@ -55,15 +57,38 @@ const FeatureAfterSection = () => {
 
 const InfoSection = () => {
   return (
-    <section id="info">
-      <div
-        className="flex h-auto min-h-screen w-screen flex-col justify-center bg-themeYellow-500 px-20 py-12"
-        id="battery"
-      >
+    <section id="info" className="bg-themeYellow-500 ">
+      <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-20 py-12">
         <h2 className="mb-32 font-Anton text-6xl text-themeRed-800">
           Information
         </h2>
-        <div className="flex h-full w-full flex-row-reverse items-center justify-center">
+        <div className="flex h-full w-full items-center justify-center">
+          <div className="relative grid w-full grid-cols-1 grid-rows-1 place-items-center">
+            <motion.figure
+              initial={{ opacity: 0, x: '-100%' }}
+              whileInView={{ opacity: 1, x: '0%' }}
+              transition={{
+                duration: 0.5,
+                type: 'spring',
+                stiffness: 100,
+                damping: 10,
+              }}
+              className="w-full animate-spin"
+            >
+              <img
+                src="./assets/images/cd-image.png"
+                className="drop-shadow-3xl animate-spin-slow"
+                alt=""
+              />
+            </motion.figure>
+            <figure className="absolute -left-1/2 top-1/2  w-full -translate-y-1/2">
+              <img
+                src="./assets/images/cd-case-half-image.png"
+                className="drop-shadow-3xl rotate-90"
+                alt=""
+              />
+            </figure>
+          </div>
           <div className="flex h-full w-full flex-col items-start justify-center">
             <h3 className="mb-8 flex flex-col">
               <span className="w-fit bg-themeRed-800 px-4 py-1 font-Anton text-xl  text-white">
@@ -115,21 +140,16 @@ const InfoSection = () => {
                 </a>
               </div>
               <div className="flex justify-end">
-                <a
-                  href="https://nodee.net/a/rv09dqc2"
-                  target="_blank"
-                  className="font-Anton text-5xl"
-                >
+                <ButtonLink href="https://nodee.net/a/rv09dqc2" blank red>
                   Listen Now!
-                </a>
+                </ButtonLink>
               </div>
             </div>
           </div>
-          <div className="w-full"></div>
         </div>
       </div>
       <div className="h-full min-h-screen w-screen bg-themeYellow-500 px-20 py-12">
-        <h2 className="relative z-[11] -mr-10 text-right font-Anton text-6xl text-themePink-500">
+        <h2 className="relative z-[11] -mr-10 text-right font-Anton text-6xl text-themeRed-800">
           Promotion
         </h2>
         <div className="relative z-10 m-auto -mt-8 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black">

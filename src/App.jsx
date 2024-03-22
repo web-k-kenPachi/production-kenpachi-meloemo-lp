@@ -9,9 +9,7 @@ function App() {
       <HeroImage />
       <ModelScroll />
       <ScrollAnimationSection />
-      <div className="relative z-50">
         <ContentSection />
-      </div>
     </>
   );
 }

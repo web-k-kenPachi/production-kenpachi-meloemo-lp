@@ -39,6 +39,12 @@ export default {
       boxShadow: {
         lg: '0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);',
       },
+      dropShadow: {
+        '3xl': '0 20px 20px rgba(0, 0, 0, 0.3)',
+      },
+      animation: {
+        'spin-slow': 'spin 16s linear infinite',
+      },
     },
   },
   plugins: [require('@designbycode/tailwindcss-text-stroke')],
