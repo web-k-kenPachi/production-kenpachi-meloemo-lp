@@ -55,7 +55,7 @@ const FeatureAfterSection = () => {
 
 const InfoSection = () => {
   return (
-    <section>
+    <section id="info">
       <div
         className="flex h-auto min-h-screen w-screen flex-col justify-center bg-themeYellow-500 px-20 py-12"
         id="battery"

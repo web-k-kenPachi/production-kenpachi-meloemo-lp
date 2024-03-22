@@ -1,5 +1,6 @@
 import AmazonMusic from './AmazonMusic';
 import AppleMusic from './AppleMusic';
+import ButtonLink from './ButtonLink';
 import Heart from './Heart';
 import {
   MotionTextFeature,
@@ -35,14 +36,12 @@ const HeroSection = () => {
                     kenPachi[.design] 1st Mini Album
                   </span>
                   <div className="mb-4">
-                    <h1 className="text-4xl text-white">
+                    <h1 className="font-DotGothic text-4xl text-white">
                       めろえも！タッチ・ザ・ハートストリングス
                     </h1>
                   </div>
                   <div>
-                    <a href="#" className="text-white">
-                      <span className="font-Anton text-5xl">Alubum Info</span>
-                    </a>
+                    <ButtonLink href="#info">Album Info</ButtonLink>
                   </div>
                 </div>
               </div>
@@ -149,13 +148,9 @@ const FeatureBeforeSection = () => {
                 </a>
               </div>
               <div className="flex justify-end">
-                <a
-                  href="https://nodee.net/a/rv09dqc2"
-                  target="_blank"
-                  className="font-Anton text-5xl"
-                >
+                <ButtonLink href="https://nodee.net/a/rv09dqc2" blank>
                   Listen Now!
-                </a>
+                </ButtonLink>
               </div>
             </div>
           </div>
