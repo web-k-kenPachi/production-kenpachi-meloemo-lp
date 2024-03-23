@@ -45,6 +45,12 @@ export default {
       animation: {
         'spin-slow': 'spin 16s linear infinite',
       },
+      keyframes: {
+        blink: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+      },
     },
   },
   plugins: [require('@designbycode/tailwindcss-text-stroke')],

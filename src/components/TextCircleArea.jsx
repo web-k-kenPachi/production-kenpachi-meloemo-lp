@@ -10,11 +10,15 @@ import {
   Float,
   OrbitControls,
   Preload,
+  Sparkles,
 } from '@react-three/drei';
 import { ModelCDCase } from './ModelCDCase';
+import Heart from './Heart';
+import IconRotate from './IconRotate';
+import IconDown from './IconDown';
 
-const randomNumber = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
+// const randomNumber = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1) + min);
 
 export const TextCircleArea = () => {
   gsap.registerPlugin(useGSAP);
@@ -67,8 +71,19 @@ export const TextCircleArea = () => {
           },
         });
       };
+
+      // const rotateHeart = () => {
+      //   gsap.to('.rotate-heart', {
+      //     rotation: '-=20',
+      //     ease: 'elastic.out(1, 0.4)',
+      //     duration: 2.5,
+      //   });
+      // };
+
       circlesText.current.addEventListener('mousedown', enterMouseEnterEv);
       circlesText.current.addEventListener('mouseup', enterMouseLeaveEv);
+
+      // circlesText.current.addEventListener('mousedown', rotateHeart);
     },
     { scope: circlesText },
   ); // 親のRefをスコープにわたす
@@ -78,6 +93,18 @@ export const TextCircleArea = () => {
       className="relative z-20 h-[calc(100vh*2)] w-screen cursor-grab bg-themePink-500 active:cursor-grabbing"
       ref={circlesText}
     >
+      <div className="absolute top-10 flex w-full animate-[blink_2s_ease-in-out_infinite] flex-col items-center justify-center opacity-45">
+        <div className="flex w-full items-center justify-center gap-2">
+          <IconRotate className="flex w-[2.5rem] items-center justify-center fill-black" />
+          <div className="font-Anton text-2xl">360°</div>
+        </div>
+        <div className="animate-bounce">
+          <IconDown className="w-[2rem] fill-black" />
+        </div>
+      </div>
+      <div className="rotate-heart absolute left-1/2 top-1/2 z-[-1] w-3/4 origin-center -translate-x-1/2 -translate-y-[45%] px-14">
+        <Heart className="fill-themeRed-500" />
+      </div>
       <Canvas
         shadows
         camera={{ position: [0, 0, 10], fov: 42 }}
@@ -101,7 +128,8 @@ export const TextCircleArea = () => {
         </Suspense>
         <AdaptiveDpr pixelated />
         <AdaptiveEvents />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} enablePan={false} />
+        <Sparkles size={5} color={'#ffbfd8'} scale={[10, 10, 10]}></Sparkles>
         <Preload all />
       </Canvas>
       {/* CIRCLE TEXT ART AREA */}
