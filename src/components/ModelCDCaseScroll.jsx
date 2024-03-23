@@ -26,7 +26,8 @@ export const ModelCDCaseScroll = ({ ...props }) => {
 
     let fov = camera.fov;
 
-    fov = (1400 * 18) / window.innerWidth;
+    fov = (window.innerHeight * 26) / window.innerWidth;
+    // fov = (1400 * 18) / window.innerWidth;
     // fov = window.innerHeight / window.innerWidth;
     camera.fov = fov;
     camera.updateProjectionMatrix();

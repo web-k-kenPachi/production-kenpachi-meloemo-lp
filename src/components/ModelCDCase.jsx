@@ -6,10 +6,18 @@ Files: compressed.glb [238.43KB] > /Users/kk/MyDocuments/06_work/Webproduct/melo
 
 import { useLayoutEffect, useRef } from 'react';
 import { useGLTF, PerspectiveCamera } from '@react-three/drei';
+import { useThree } from '@react-three/fiber';
 
 export const ModelCDCase = ({ ...props }) => {
   const group = useRef();
   const { nodes, materials } = useGLTF('./model/model-cd-case.glb');
+
+  let camera = useThree((state) => state.camera);
+  let fov = camera.fov;
+
+  fov = window.innerHeight / window.innerWidth;
+  camera.fov = fov * 70;
+  camera.updateProjectionMatrix();
 
   return (
     <group {...props} dispose={null}>
