@@ -9,24 +9,14 @@ import { motion } from 'framer-motion';
 export default function Scene() {
   return (
     <>
-      <Noise
-        className="absolute h-full w-full overflow-hidden opacity-35"
-        style={{
-          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
-        }}
-      />
+      <Noise className="main-visual-clip absolute h-full w-full overflow-hidden opacity-35" />
       {/* <BgGrid
         className="absolute h-full w-full overflow-hidden opacity-40"
         style={{
           clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
         }}
       /> */}
-      <div
-        className="absolute z-10 h-full w-full  overflow-hidden mix-blend-difference"
-        style={{
-          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
-        }}
-      >
+      <div className="main-visual-clip absolute z-10 h-full  w-full overflow-hidden mix-blend-difference">
         <motion.div
           className="absolute ml-[5rem] mt-[2rem] flex h-full items-start justify-center text-nowrap font-DotGothic text-[30vw] font-bold text-white"
           animate={{
@@ -50,14 +40,9 @@ export default function Scene() {
           </div>
         </motion.div>
       </div>
-      <div
-        className="absolute z-[-51] h-full w-full overflow-hidden bg-themeYellow-500 "
-        style={{
-          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
-        }}
-      ></div>
+      <div className="main-visual-clip absolute z-[-51] h-full w-full overflow-hidden bg-themeYellow-500"></div>
       <Canvas
-        className="overflow-hidden blur-[1px]"
+        className="main-visual-clip overflow-hidden blur-[1px]"
         style={{
           position: 'relative',
           top: 0,
@@ -66,7 +51,6 @@ export default function Scene() {
           height: '100vh',
           pointerEvents: 'none',
           overflow: 'hidden',
-          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
           zIndex: '-50',
         }}
         eventSource={document.body}

@@ -90,10 +90,10 @@ export const TextCircleArea = () => {
 
   return (
     <div
-      className="relative z-20 h-[calc(100vh*2)] w-screen cursor-grab bg-themePink-500 active:cursor-grabbing"
+      className="relative z-20 h-[80vh] w-screen cursor-grab bg-themePink-500 px-10 pb-20 active:cursor-grabbing md:h-[calc(100vh*2)] md:px-0"
       ref={circlesText}
     >
-      <div className="absolute top-10 flex w-full animate-[blink_2s_ease-in-out_infinite] flex-col items-center justify-center opacity-45">
+      <div className="absolute  top-10 flex w-[calc(100%-4rem)] animate-[blink_2s_ease-in-out_infinite] flex-col items-center justify-center opacity-45 md:w-full">
         <div className="flex w-full items-center justify-center gap-2">
           <IconRotate className="flex w-[2.5rem] items-center justify-center fill-black" />
           <div className="font-Anton text-2xl">360°</div>

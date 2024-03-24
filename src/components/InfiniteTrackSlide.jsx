@@ -24,7 +24,7 @@ const InfiniteTrackSlide = () => {
           alt=""
         />
       </figure>
-      <div className="absolute top-1/2 w-full -translate-y-1/2 overflow-hidden font-DotGothic text-4xl  font-bold text-themeYellow-500">
+      <div className="absolute top-1/2 w-full -translate-y-1/2 overflow-hidden font-DotGothic text-2xl  font-bold  text-themeYellow-500 md:text-4xl">
         {/* Wrapping div for seamless looping */}
         <motion.div
           className="flex"
@@ -41,7 +41,7 @@ const InfiniteTrackSlide = () => {
             className="flex-shrink-0"
             style={{ width: `${500 / (trackList.length + 1)}%` }}
           >
-            <div className="flex h-full flex-col items-center justify-center text-5xl">
+            <div className="flex h-full flex-col items-center justify-center text-2xl md:text-5xl">
               【Track List】
             </div>
           </div>
@@ -61,7 +61,7 @@ const InfiniteTrackSlide = () => {
             className="flex-shrink-0"
             style={{ width: `${500 / (trackList.length + 1)}%` }}
           >
-            <div className="flex h-full flex-col items-center justify-center text-5xl">
+            <div className="flex h-full flex-col items-center justify-center text-2xl md:text-5xl">
               【Track List】
             </div>
           </div>

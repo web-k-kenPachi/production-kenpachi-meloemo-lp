@@ -32,14 +32,14 @@ const FeatureAfterSection = () => {
         <InfiniteTrackSlide />
         {/* FEATURE DESC 03 */}
         <div className="flex h-screen w-screen flex-col justify-center ">
-          <div className="h-auto w-full px-20 py-20">
+          <div className="h-auto w-full px-8 py-20 md:px-20">
             <div className="h-full w-full">
               <div className="flex h-full w-full items-center justify-start">
-                <div className="relative flex h-full w-[calc(100%/8*6)] flex-col items-center justify-center">
-                  <div className="px-14: absolute left-0 top-[40%] z-[-1] w-full  max-w-[calc(100vw/6*2)] -translate-y-[30%]">
+                <div className="relative flex h-full w-10/12 flex-col items-center justify-center md:w-[calc(100%/8*6)]">
+                  <div className="px-14: absolute left-0 top-[40%] z-[-1] w-full -translate-y-[30%] md:max-w-[calc(100vw/6*2)]">
                     <Heart className="fill-themeRed-500" />
                   </div>
-                  <h3 className="relative text-4xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['03'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent">
+                  <h3 className="relative text-xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['03'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent md:text-4xl">
                     作詞・作曲・編曲者自身がジャケットデザイン・入稿作業・プロモーションも担当！
                   </h3>
                 </div>
@@ -57,12 +57,12 @@ const FeatureAfterSection = () => {
 
 const InfoSection = () => {
   return (
-    <section id="info" className="bg-themeYellow-500 ">
-      <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-20 py-24">
-        <h2 className="text-displayXl mb-32 font-Anton text-themeRed-800">
+    <section id="info" className="overflow-hidden bg-themeYellow-500">
+      <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-4 py-24 md:px-20">
+        <h2 className="md:text-displayXl mb-16 font-Anton text-5xl text-themeRed-800 md:mb-32">
           Information
         </h2>
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-10 md:flex-row md:gap-0">
           <div className="relative grid w-full grid-cols-1 grid-rows-1 ">
             <motion.figure
               initial={{ opacity: 0, x: '-100%' }}
@@ -91,10 +91,10 @@ const InfoSection = () => {
           </div>
           <div className="flex h-full w-full flex-col items-start justify-center">
             <h3 className="mb-8 flex flex-col">
-              <span className="w-fit bg-themeRed-800 px-4 py-1 font-Anton text-xl  text-white">
+              <span className="mb-2 w-fit bg-themeRed-800 px-4 py-1 font-Anton text-xl  text-white">
                 kenPachi[.design] 1st Mini Album
               </span>
-              <span className="font-kaisei  text-4xl font-bold text-themeRed-800">
+              <span className="font-kaisei text-3xl font-bold text-themeRed-800 md:text-4xl">
                 めろえも！タッチ・ザ・ ハートストリングス
               </span>
             </h3>
@@ -110,10 +110,10 @@ const InfoSection = () => {
             </ul>
             {/* MUSIC LINK */}
             <div className="">
-              <h4 className="mb-6 text-3xl font-bold text-themeRed-800">
+              <h4 className="mb-6 text-lg font-bold text-themeRed-800 md:text-3xl">
                 ＜配信先リンク＞
               </h4>
-              <div className="mb-8 flex w-full items-center justify-between gap-16">
+              <div className="mb-8 flex w-full items-center justify-between gap-8 md:gap-16">
                 <a
                   href="https://open.spotify.com/intl-ja/album/4AGvNA0mTGf8Zo6XDIJm7T"
                   target="_blank"
@@ -148,13 +148,13 @@ const InfoSection = () => {
           </div>
         </div>
       </div>
-      <div className="h-full min-h-screen w-screen bg-themeYellow-500 px-20 py-24">
+      <div className="h-full min-h-screen w-screen bg-themeYellow-500 px-4 py-24 md:px-20">
         <div className="m-auto w-full max-w-[1360px]">
-          <h2 className="text-displayXl relative z-[11] ml-[4rem] w-full text-right font-Anton text-themeRed-800 ">
+          <h2 className="md:text-displayXl relative  z-[11] ml-[4%] w-full text-right font-Anton text-5xl text-themeRed-800 ">
             Promotion
           </h2>
         </div>
-        <div className="relative z-10 m-auto -mt-12 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black ">
+        <div className="relative z-10 m-auto -mt-6 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black md:-mt-12 ">
           <div className="gradient-bg-promotion absolute inset-0 -z-[1] h-full w-full"></div>
           <Noise className="absolute inset-0 -z-[1] h-full w-full mix-blend-screen" />
           <figure className="absolute left-[-4%] -z-[1] w-2/12">
@@ -186,14 +186,14 @@ const MessageSection = () => {
         <figure className="absolute inset-0 -z-10">
           <img src="./assets/images/bg-message01.jpg" alt="" />
         </figure>
-        <div className="flex h-auto min-h-screen w-screen items-center justify-end px-20 py-12">
-          <div className="w-4/6">
-            <h2 className="text-displayXl -ml-8 font-Anton text-white mix-blend-difference">
+        <div className="flex h-auto min-h-screen w-screen items-center justify-end px-4 py-12 md:px-20">
+          <div className="w-full md:w-4/6">
+            <h2 className="md:text-displayXl -ml-2 font-Anton text-5xl text-white mix-blend-difference md:-ml-8">
               MESSAGE
             </h2>
-            <div className="-mt-10 rounded-lg bg-white px-10 py-24 font-NotoSans leading-8">
-              <p className="mb-4">
-                このミニアルバムについてと「M3-2023春」での頒布を終えて。
+            <div className="-mt-10 rounded-lg bg-white px-4 py-24 font-NotoSans text-sm leading-6 md:px-10 md:text-base md:leading-8">
+              <p className="mb-6 text-base font-bold">
+                このミニアルバムについてと「M3-2023春」での頒布を終えて
               </p>
               <p className="mb-4">
                 kenPachi[.design]
@@ -235,10 +235,10 @@ const MessageSection = () => {
 
 const Footer = () => {
   return (
-    <footer className="h-auto w-screen bg-themePink-500 px-20 py-16">
+    <footer className="h-auto w-screen bg-themePink-500 px-4 py-16 md:px-20">
       <div className="m-auto max-w-[980px]">
-        <div className="mb-8 flex w-full items-center justify-between  gap-4 ">
-          <div className="w-3/12">
+        <div className="mb-8 flex w-full flex-col items-center justify-between gap-4  md:flex-row ">
+          <div className="w-full md:w-3/12">
             <figure className="relative overflow-hidden rounded-full pb-[100%]">
               <img
                 className="absolute inset-0"
@@ -247,7 +247,7 @@ const Footer = () => {
               />
             </figure>
           </div>
-          <div className="w-9/12">
+          <div className="w-full md:w-9/12">
             <p className="mb-2 text-white">
               <span className="font-bold">kenPachi[.design]</span>
               <br />

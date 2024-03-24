@@ -39,7 +39,7 @@ export const FeatureSlide = () => {
     <Swiper
       modules={[FreeMode]}
       spaceBetween={'4%'}
-      slidesPerView={3.5}
+      slidesPerView={1.5}
       freeMode={true}
       slidesOffsetAfter={160}
       slidesOffsetBefore={80}
@@ -47,6 +47,11 @@ export const FeatureSlide = () => {
       // onSwiper={(swiper) => console.log(swiper)}
       className="mySwiper"
       grabCursor={true}
+      breakpoints={{
+        768: {
+          slidesPerView: 3.5,
+        },
+      }}
     >
       {works.map(({ description, imgSrc }) => {
         return (

@@ -7,6 +7,10 @@
   height: 100vh;
 } */
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: 'Kaisei Decol', sans-serif;
@@ -66,4 +70,14 @@ img {
 
 .pin-spacer {
   pointer-events: none;
+}
+
+.main-visual-clip {
+  clip-path: inset(1rem 2rem 1rem 2rem round 1rem);
+}
+
+@media screen and (min-width: 768px) {
+  .main-visual-clip {
+    clip-path: inset(2rem 5rem 2rem 5rem round 1rem);
+  }
 }

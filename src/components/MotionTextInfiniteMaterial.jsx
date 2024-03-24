@@ -94,7 +94,7 @@ export const MotionTextFeature = () => {
 
 export const MotionTextMeloEmo = () => {
   return (
-    <div className="absolute top-[50vh] -z-[1] flex  -rotate-12  text-nowrap font-Anton text-[16rem] leading-none text-transparent text-stroke-1 text-stroke-white">
+    <div className="absolute top-[0vh] -z-[1] flex -rotate-12  text-nowrap  font-Anton text-[16rem] leading-none text-transparent text-stroke-1 text-stroke-white md:top-[50vh]">
       <MotionTextInfiniteSkew>Melo-Emo!</MotionTextInfiniteSkew>
     </div>
   );
