@@ -32,11 +32,11 @@ const HeroSection = () => {
             <div className="h-full w-full px-20 py-8">
               <div className="relative h-full w-full">
                 <div className="absolute bottom-0 h-auto w-[calc(100%/8*3.5)]  rounded-tr-[2rem] bg-themePink-500 px-8 py-8">
-                  <span className="absolute -top-[8%] block bg-black px-2 py-1 font-Anton text-2xl text-white">
+                  <span className="absolute -top-[4%] block bg-black px-2 py-1 font-Anton text-2xl text-white">
                     kenPachi[.design] 1st Mini Album
                   </span>
                   <div className="mb-4">
-                    <h1 className="font-DotGothic text-[min(3vw,6rem)] text-white">
+                    <h1 className="font-DotGothic text-[min(2.6vw,5.5rem)] text-white">
                       めろえも！タッチ・ザ・ハートストリングス
                     </h1>
                   </div>
