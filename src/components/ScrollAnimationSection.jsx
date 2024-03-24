@@ -60,16 +60,17 @@ const HeroSection = () => {
                 Melo-Emo! Touch the Heartstrings
               </span>
             </div>
-            <div className="absolute bottom-[calc(2rem-36%)] right-[6%] h-auto w-[46%]">
+            <div className="absolute right-[6%] top-[66%] h-auto w-1/2 -translate-y-1/2">
               <figure className="hidden h-auto w-full md:block">
                 <img
                   src="./assets/images/main-illust.png"
                   alt="Hatsune Miku Illust"
+                  className="drop-shadow-2xl"
                 />
               </figure>
             </div>
             <div className="absolute right-[12%] top-[calc(2rem-1%)] md:right-[10%]">
-              <div className="md:text-display flex flex-col gap-[min(2.5vw,3rem)] text-xl  [writing-mode:vertical-rl]">
+              <div className="md:text-displaySm flex flex-col gap-[min(2.5vw,3rem)] text-xl  [writing-mode:vertical-rl]">
                 <span className="gradient-bg--opacity hidden w-fit p-2 text-white md:block">
                   心の琴線に触れる、
                 </span>
