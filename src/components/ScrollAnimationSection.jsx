@@ -60,7 +60,7 @@ const HeroSection = () => {
                 Melo-Emo! Touch the Heartstrings
               </span>
             </div>
-            <div className="absolute bottom-[calc(2rem-30%)] right-[6%] h-auto w-[46%]">
+            <div className="absolute bottom-[calc(2rem-36%)] right-[6%] h-auto w-[46%]">
               <figure className="h-auto w-full">
                 <img src="./assets/images/main-illust.png" alt="" />
               </figure>
