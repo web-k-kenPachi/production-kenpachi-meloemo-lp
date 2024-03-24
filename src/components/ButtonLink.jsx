@@ -2,7 +2,7 @@ const ButtonLink = ({ children, href, blank, red }) => {
   return (
     <a
       href={href}
-      className={`group flex items-center justify-center gap-8 ${red ? 'text-themeRed-800' : 'text-white'}`}
+      className={`group flex items-center gap-8 ${red ? 'text-themeRed-800' : 'text-white'}`}
       target={blank ? '_blank' : '_self'}
     >
       <span className=" font-Anton text-5xl">{children}</span>

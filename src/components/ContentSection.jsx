@@ -58,12 +58,12 @@ const FeatureAfterSection = () => {
 const InfoSection = () => {
   return (
     <section id="info" className="bg-themeYellow-500 ">
-      <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-20 py-12">
-        <h2 className="mb-32 font-Anton text-6xl text-themeRed-800">
+      <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-20 py-24">
+        <h2 className="text-displayXl mb-32 font-Anton text-themeRed-800">
           Information
         </h2>
         <div className="flex h-full w-full items-center justify-center">
-          <div className="relative grid w-full grid-cols-1 grid-rows-1 place-items-center">
+          <div className="relative grid w-full grid-cols-1 grid-rows-1 ">
             <motion.figure
               initial={{ opacity: 0, x: '-100%' }}
               whileInView={{ opacity: 1, x: '0%' }}
@@ -73,18 +73,18 @@ const InfoSection = () => {
                 stiffness: 100,
                 damping: 10,
               }}
-              className="w-full animate-spin"
+              className="col-start-1 row-start-1 w-full animate-spin self-center"
             >
               <img
                 src="./assets/images/cd-image.png"
-                className="drop-shadow-3xl animate-spin-slow"
+                className="animate-spin-slow drop-shadow-3xl"
                 alt=""
               />
             </motion.figure>
-            <figure className="absolute -left-1/2 top-1/2  w-full -translate-y-1/2">
+            <figure className="col-start-1 row-start-1 -ml-[min(20rem,46%)]  w-2/3 self-center">
               <img
                 src="./assets/images/cd-case-half-image.png"
-                className="drop-shadow-3xl rotate-90"
+                className="rotate-90 drop-shadow-3xl"
                 alt=""
               />
             </figure>
@@ -148,11 +148,13 @@ const InfoSection = () => {
           </div>
         </div>
       </div>
-      <div className="h-full min-h-screen w-screen bg-themeYellow-500 px-20 py-12">
-        <h2 className="relative z-[11] -mr-10 text-right font-Anton text-6xl text-themeRed-800">
-          Promotion
-        </h2>
-        <div className="relative z-10 m-auto -mt-8 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black">
+      <div className="h-full min-h-screen w-screen bg-themeYellow-500 px-20 py-24">
+        <div className="m-auto w-full max-w-[1360px]">
+          <h2 className="text-displayXl relative z-[11] ml-[4rem] w-full text-right font-Anton text-themeRed-800 ">
+            Promotion
+          </h2>
+        </div>
+        <div className="relative z-10 m-auto -mt-12 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black ">
           <div className="gradient-bg-promotion absolute inset-0 -z-[1] h-full w-full"></div>
           <Noise className="absolute inset-0 -z-[1] h-full w-full mix-blend-screen" />
           <figure className="absolute left-[-4%] -z-[1] w-2/12">
@@ -184,12 +186,12 @@ const MessageSection = () => {
         <figure className="absolute inset-0 -z-10">
           <img src="./assets/images/bg-message01.jpg" alt="" />
         </figure>
-        <div className="flex h-auto min-h-screen w-screen justify-end px-20 py-12">
+        <div className="flex h-auto min-h-screen w-screen items-center justify-end px-20 py-12">
           <div className="w-4/6">
-            <h2 className="-ml-8 font-Anton text-6xl text-white mix-blend-difference">
+            <h2 className="text-displayXl -ml-8 font-Anton text-white mix-blend-difference">
               MESSAGE
             </h2>
-            <div className="-mt-10 rounded-lg bg-white px-10 py-20 font-NotoSans leading-8">
+            <div className="-mt-10 rounded-lg bg-white px-10 py-24 font-NotoSans leading-8">
               <p className="mb-4">
                 このミニアルバムについてと「M3-2023春」での頒布を終えて。
               </p>

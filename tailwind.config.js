@@ -13,6 +13,9 @@ export default {
       '4xl': ['2.67rem', '3.25rem'],
       '5xl': ['4rem', '4.5rem'],
       '6xl': ['8rem', '8rem'],
+      displaySm: ['min(3vw,6rem)', '1.5em'],
+      display: ['min(4vw,8rem)', '1.5em'],
+      displayXl: ['min(12vw,12rem)', '1em'],
     },
     extend: {
       colors: {

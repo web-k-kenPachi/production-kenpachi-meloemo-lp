@@ -22,7 +22,7 @@ const HeroSection = () => {
   return (
     <>
       <div className="absolute left-[-2%] top-[4%] z-50  px-20 py-8">
-        <div className="w-fit -rotate-6 bg-black px-2 py-1 text-5xl text-white">
+        <div className="text-displaySm w-fit -rotate-6 bg-black px-2 py-1 text-white">
           CD頒布＆楽曲配信中！
         </div>
       </div>
@@ -31,12 +31,12 @@ const HeroSection = () => {
           <div className="relative h-full w-full">
             <div className="h-full w-full px-20 py-8">
               <div className="relative h-full w-full">
-                <div className="absolute bottom-0 h-auto w-[calc(100%/8*3.5)]  max-w-[680px] rounded-tr-[2rem] bg-themePink-500 px-8 py-6">
-                  <span className="absolute -top-4 block bg-black px-2 py-1 font-Anton text-2xl text-white">
+                <div className="absolute bottom-0 h-auto w-[calc(100%/8*3.5)]  rounded-tr-[2rem] bg-themePink-500 px-8 py-8">
+                  <span className="absolute -top-[8%] block bg-black px-2 py-1 font-Anton text-2xl text-white">
                     kenPachi[.design] 1st Mini Album
                   </span>
                   <div className="mb-4">
-                    <h1 className="font-DotGothic text-4xl text-white">
+                    <h1 className="font-DotGothic text-[min(3vw,6rem)] text-white">
                       めろえも！タッチ・ザ・ハートストリングス
                     </h1>
                   </div>
@@ -60,17 +60,17 @@ const HeroSection = () => {
                 Melo-Emo! Touch the Heartstrings
               </span>
             </div>
-            <div className="absolute right-[6%] top-[calc(2rem+12%)] h-auto w-[46%]">
+            <div className="absolute bottom-[calc(2rem-30%)] right-[6%] h-auto w-[46%]">
               <figure className="h-auto w-full">
                 <img src="./assets/images/main-illust.png" alt="" />
               </figure>
             </div>
-            <div className="absolute right-[14%] top-[calc(2rem-1%)]">
-              <div className="flex flex-col gap-9 text-4xl [writing-mode:vertical-rl]">
-                <span className="gradient-bg w-fit p-2 text-white">
+            <div className="absolute right-[10%] top-[calc(2rem-1%)]">
+              <div className="text-display flex flex-col gap-[min(2.5vw,3rem)]  [writing-mode:vertical-rl]">
+                <span className="gradient-bg--opacity w-fit p-2 text-white">
                   心の琴線に触れる、
                 </span>
-                <span className="gradient-bg w-fit p-2  text-white">
+                <span className="gradient-bg--opacity w-fit p-2  text-white">
                   えもいメロディー。
                 </span>
               </div>
@@ -120,7 +120,7 @@ const FeatureBeforeSection = () => {
             </h3>
             {/* MUSIC LINK */}
             <div className="">
-              <h4 className="mb-4">＜配信先リンク＞</h4>
+              <h4 className="mb-4 text-3xl text-white">＜配信先リンク＞</h4>
               <div className="mb-8 flex w-full items-center justify-between gap-16">
                 <a
                   href="https://open.spotify.com/intl-ja/album/4AGvNA0mTGf8Zo6XDIJm7T"

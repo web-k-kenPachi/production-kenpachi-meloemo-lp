@@ -28,6 +28,15 @@ img {
   );
 }
 
+.gradient-bg--opacity {
+  background: linear-gradient(
+    192.57deg,
+    rgba(18, 194, 233, 0.87) 19.92%,
+    rgba(196, 113, 237, 0.87) 51.49%,
+    rgba(246, 79, 89, 0.87) 81.77%
+  );
+}
+
 .gradient-bg-promotion {
   background: linear-gradient(36.61deg, #d586b5 0%, #87d0f4 100%);
 }
