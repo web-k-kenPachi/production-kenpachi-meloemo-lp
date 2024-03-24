@@ -33,7 +33,7 @@ const ComponentVideo01 = () => {
       >
         <div className="relative">
           <img src="./assets/images/promo-video01.jpg" alt="" />
-          <div className="absolute -left-[10%] top-[-10%] w-fit bg-themePink-500 px-2 py-2 text-xl font-bold text-white md:-left-[30%] md:bottom-[16%] md:top-0 md:px-4 md:text-4xl ">
+          <div className="absolute -left-[10%] top-[-10%] w-fit bg-themePink-500 px-2 py-2 text-xl font-bold text-white md:-left-[30%] md:bottom-[16%] md:top-[unset] md:px-4 md:text-4xl ">
             クロスフェードムービー
           </div>
           <div className="absolute left-1/2 top-1/2 z-50 h-auto w-1/6 -translate-x-1/2 -translate-y-1/2 text-themePink-500">

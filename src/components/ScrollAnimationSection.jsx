@@ -21,7 +21,7 @@ export const ScrollAnimationSection = () => {
 const HeroSection = () => {
   return (
     <>
-      <div className="absolute left-[-6%]  top-1/4 z-50 -translate-y-1/2 px-8 py-4 md:left-[-2%] md:top-[4%] md:px-20 md:py-8">
+      <div className="absolute left-[-6%]  top-1/4 z-50 -translate-y-1/2 px-8 py-4 md:left-[-2%] md:top-[10%] md:px-20 md:py-8">
         <div className="md:text-displaySm w-fit -rotate-6 bg-black px-2 py-1 text-2xl text-white">
           CD頒布＆楽曲配信中！
         </div>
