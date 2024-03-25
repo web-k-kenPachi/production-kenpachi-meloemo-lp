@@ -21,9 +21,6 @@ export const ModelCDCaseScroll = ({ ...props }) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
-    camera.position.set(0.25, 0, 2);
-    scene.rotation.set(0, 0, 0);
-
     let fov = camera.fov;
 
     fov = (window.innerHeight * 28) / window.innerWidth;
@@ -36,9 +33,8 @@ export const ModelCDCaseScroll = ({ ...props }) => {
 
     mm.add(
       {
-        // set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
-        isDesktop: `(min-width: 48em)`,
-        isMobile: `(max-width:48em)`,
+        isDesktop: `(min-width: 768px)`,
+        isMobile: `(max-width: 767px)`,
       },
 
       (context) => {
@@ -49,6 +45,9 @@ export const ModelCDCaseScroll = ({ ...props }) => {
             ease: 'power3.inOut',
           },
         });
+
+        camera.position.set(isDesktop ? 0.25 : 0, 0, 2);
+        scene.rotation.set(0, 0, 0);
 
         startTl
           .fromTo(camera.position, { y: 0 }, { y: 0, duration: 1 })
@@ -66,12 +65,28 @@ export const ModelCDCaseScroll = ({ ...props }) => {
           },
         });
 
-        t1.to(scene.rotation, { x: 2.5, y: 1, z: 0.3 }, 'key1')
-          .to(camera.position, { x: 0 }, 'key1')
-          .to(scene.rotation, { x: 6.5, y: -0.15, z: 0 }, 'key2')
-          .to(camera.position, { x: -0.25 }, 'key2')
-          .to(scene.rotation, { x: 0, y: -2.5 }, 'key3')
-          .to(camera.position, { x: 0.25 }, 'key3');
+        t1.to(
+          scene.rotation,
+          { x: isDesktop ? 2.5 : 0, y: isDesktop ? 1 : 4, z:isDesktop ? 0.3 : 2.5 },
+          'key1',
+        )
+          .to(camera.position, { x: 0, y: isDesktop ? 0 : -0.1 }, 'key1')
+          .to(
+            scene.rotation,
+            { x: isDesktop ? 6.5 : 0, y: isDesktop ? -0.15 : 6.5, z: 0 },
+            'key2',
+          )
+          .to(
+            camera.position,
+            { x: isDesktop ? -0.25 : 0, y: isDesktop ? 0 : -0.1 },
+            'key2',
+          )
+          .to(scene.rotation, { x: 0, y: isDesktop ? -2.5 : 9.5 }, 'key3')
+          .to(
+            camera.position,
+            { x: isDesktop ? 0.25 : 0, y: isDesktop ? 0 : -0.1 },
+            'key3',
+          );
 
         if (isMobile) {
           camera.fov = 20;

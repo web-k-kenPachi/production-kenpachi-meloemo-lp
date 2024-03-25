@@ -57,7 +57,7 @@ const FeatureAfterSection = () => {
 
 const InfoSection = () => {
   return (
-    <section id="info" className="overflow-hidden bg-themeYellow-500">
+    <section id="info" className="overflow-hidden bg-themeYellow-500 ">
       <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-4 py-24 md:px-20">
         <h2 className="md:text-displayXl mb-16 font-Anton text-5xl text-themeRed-800 md:mb-32">
           Information
@@ -65,15 +65,14 @@ const InfoSection = () => {
         <div className="flex h-full w-full flex-col items-center justify-center gap-10 md:flex-row md:gap-0">
           <div className="relative grid w-full grid-cols-1 grid-rows-1 ">
             <motion.figure
-              initial={{ opacity: 0, x: '-100%' }}
+              initial={{ opacity: 0, x: '-50%' }}
               whileInView={{ opacity: 1, x: '0%' }}
               transition={{
-                duration: 0.5,
                 type: 'spring',
-                stiffness: 100,
-                damping: 10,
+                stiffness: 300,
+                damping: 5,
               }}
-              className="col-start-1 row-start-1 w-full animate-spin self-center"
+              className="col-start-1 row-start-1 w-full self-center"
             >
               <img
                 src="./assets/images/cd-image.png"
@@ -150,11 +149,11 @@ const InfoSection = () => {
       </div>
       <div className="h-full min-h-screen w-screen bg-themeYellow-500 px-4 py-24 md:px-20">
         <div className="m-auto w-full max-w-[1360px]">
-          <h2 className="md:text-displayXl relative  z-[11] ml-[4%] w-full text-right font-Anton text-5xl text-themeRed-800 ">
+          <h2 className="md:text-displayXl relative  z-[51] ml-[4%] w-full text-right font-Anton text-5xl text-themeRed-800 ">
             Promotion
           </h2>
         </div>
-        <div className="relative z-10 m-auto -mt-6 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black md:-mt-12 ">
+        <div className="relative z-50 m-auto -mt-6 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black md:-mt-12 ">
           <div className="gradient-bg-promotion absolute inset-0 -z-[1] h-full w-full"></div>
           <Noise className="absolute inset-0 -z-[1] h-full w-full mix-blend-screen" />
           <figure className="absolute left-[-4%] -z-[1] w-2/12">
@@ -183,15 +182,15 @@ const MessageSection = () => {
   return (
     <section>
       <div className="relative h-full w-full">
-        <figure className="absolute inset-0 -z-10">
+        <figure className="absolute inset-0">
           <img src="./assets/images/bg-message01.jpg" alt="" />
         </figure>
         <div className="flex h-auto min-h-screen w-screen items-center justify-end px-4 py-12 md:px-20">
           <div className="w-full md:w-4/6">
-            <h2 className="md:text-displayXl -ml-2 font-Anton text-5xl text-white mix-blend-difference md:-ml-8">
+            <h2 className="md:text-displayXl relative z-10  -ml-2 font-Anton text-5xl text-white mix-blend-difference md:-ml-8">
               MESSAGE
             </h2>
-            <div className="-mt-10 rounded-lg bg-white px-4 py-24 font-NotoSans text-sm leading-6 md:px-10 md:text-base md:leading-8">
+            <div className="relative -mt-10 rounded-lg bg-white px-4 py-24 font-NotoSans text-sm leading-6 md:px-10 md:text-base md:leading-8">
               <p className="mb-6 text-base font-bold">
                 このミニアルバムについてと「M3-2023春」での頒布を終えて
               </p>
@@ -255,7 +254,7 @@ const Footer = () => {
               2023年にバーチャル・シンガー：初音ミクの楽曲を収録したCD・配信作品を発表。
               アニメソング、歌謡曲、映画音楽、テーマパーク音楽、吹奏楽、ジャズなどから影響を受けている。
               主に使用できる楽器はギターとコントラバス。
-              デザインワークにはAdobe製品を愛用。
+              デザインワークではAdobe製品を愛用。
             </p>
             <div>
               <ul className="flex gap-4 text-themeYellow-500">

@@ -100,7 +100,7 @@ const FeatureBeforeSection = () => {
         {/* FEATURE DESC */}
         {/* FEATURE DESC 01 */}
         <div className="flex h-full w-full flex-col-reverse items-center justify-center px-8 py-8  md:flex-row md:px-20">
-          <div className="relative flex h-full w-full flex-col items-center justify-center">
+          <div className="relative z-50 flex h-full w-full flex-col items-center justify-center">
             <div className="absolute top-[40%] z-[-1] w-full -translate-y-[30%]  px-14">
               <Heart className="fill-themeRed-500" />
             </div>
@@ -115,7 +115,7 @@ const FeatureBeforeSection = () => {
       <section className="h-screen w-screen" id="feature-scroll-end">
         {/* FEATURE DESC 02 */}
         <div className="flex h-full w-full flex-col-reverse items-center justify-center px-8 py-8  md:flex-row-reverse md:px-20">
-          <div className="relative flex h-full w-full flex-col items-center justify-center">
+          <div className="relative z-50 flex h-full w-full flex-col items-center justify-center">
             <div className="absolute top-[20%] z-[-1] w-full px-14">
               <Heart className="fill-themeRed-500" />
             </div>

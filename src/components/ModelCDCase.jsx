@@ -4,8 +4,8 @@ Command: npx gltfjsx@6.2.16 compressed.glb --transform
 Files: compressed.glb [238.43KB] > /Users/kk/MyDocuments/06_work/Webproduct/meloemo-lp/dev-env/compressed-transformed.glb [242.35KB] (-2%)
 */
 
-import { useLayoutEffect, useRef } from 'react';
-import { useGLTF, PerspectiveCamera } from '@react-three/drei';
+import { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 
 export const ModelCDCase = ({ ...props }) => {
@@ -15,8 +15,18 @@ export const ModelCDCase = ({ ...props }) => {
   let camera = useThree((state) => state.camera);
   let fov = camera.fov;
 
-  fov = window.innerHeight / window.innerWidth;
-  camera.fov = fov * 70;
+  if (window.innerWidth <= 767) {
+    // console.log('mobile');
+
+    fov = 150 / window.innerWidth;
+    camera.fov = fov * 70;
+  } else {
+    // console.log('pc');
+
+    fov = window.innerHeight / window.innerWidth;
+    camera.fov = fov * 70;
+  }
+
   camera.updateProjectionMatrix();
 
   return (
