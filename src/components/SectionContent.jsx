@@ -24,6 +24,27 @@ export const SectionContent = () => {
 };
 
 const FeatureAfterSection = () => {
+  const featureAnimationList = {
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: 'afterChildren',
+      },
+    },
+  };
+
+  const featureAnimationItem = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 100 },
+  };
   return (
     <section>
       {/* FEATURE DETAIL AREA */}
@@ -35,14 +56,26 @@ const FeatureAfterSection = () => {
           <div className="h-auto w-full px-8 py-20 md:px-20">
             <div className="h-full w-full">
               <div className="flex h-full w-full items-center justify-start">
-                <div className="relative flex h-full w-10/12 flex-col items-center justify-center md:w-[calc(100%/8*6)]">
-                  <div className="px-14: absolute left-0 top-[40%] z-[-1] w-full -translate-y-[30%] md:max-w-[calc(100vw/6*2)]">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={featureAnimationList}
+                  className="relative flex h-full w-10/12 flex-col items-start justify-center md:w-[calc(100%/8*6)]"
+                >
+                  <motion.div
+                    variants={featureAnimationItem}
+                    className="absolute flex w-full flex-col items-center justify-center md:max-w-[calc(100vw/6*2)]"
+                  >
                     <Heart className="fill-themeRed-500" />
-                  </div>
-                  <h3 className="relative text-xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['03'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent md:text-4xl">
+                  </motion.div>
+                  <motion.h3
+                    variants={featureAnimationItem}
+                    className="relative text-xl before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['03'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent md:text-4xl"
+                  >
                     作詞・作曲・編曲者自身がジャケットデザイン・入稿作業・プロモーションも担当！
-                  </h3>
-                </div>
+                  </motion.h3>
+                </motion.div>
               </div>
             </div>
           </div>

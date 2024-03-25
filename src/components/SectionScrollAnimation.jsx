@@ -8,6 +8,7 @@ import {
 } from './MotionTextInfiniteMaterial';
 import { Spotify } from './IconSvg';
 import { YoutubeMusic } from './IconSvg';
+import { motion } from 'framer-motion';
 
 export const SectionScrollAnimation = () => {
   return (
@@ -87,6 +88,28 @@ const HeroSection = () => {
 };
 
 const FeatureBeforeSection = () => {
+  const featureAnimationList = {
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: 'afterChildren',
+      },
+    },
+  };
+
+  const featureAnimationItem = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 100 },
+  };
+
   return (
     <>
       {/* FEATURE Display TEXT */}
@@ -100,30 +123,55 @@ const FeatureBeforeSection = () => {
         {/* FEATURE DESC */}
         {/* FEATURE DESC 01 */}
         <div className="flex h-full w-full flex-col-reverse items-center justify-center px-8 py-8  md:flex-row md:px-20">
-          <div className="relative z-50 flex h-full w-full flex-col items-center justify-center">
-            <div className="absolute top-[40%] z-[-1] w-full -translate-y-[30%]  px-14">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={featureAnimationList}
+            className="relative z-50 flex h-full w-full flex-col items-center justify-center"
+          >
+            <motion.div
+              variants={featureAnimationItem}
+              className="absolute flex w-full flex-col items-center justify-center"
+            >
               <Heart className="fill-themeRed-500" />
-            </div>
-            <h3 className="relative text-xl text-white before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['01'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent md:text-4xl">
+            </motion.div>
+            <motion.h3
+              variants={featureAnimationItem}
+              className="relative text-xl text-white before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['01'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent md:text-4xl"
+            >
               初音ミクをボーカルに起用したkenPachi[.design]
               自身初となるミニアルバム！
-            </h3>
-          </div>
+            </motion.h3>
+          </motion.div>
+
           <div className="h-full w-full"></div>
         </div>
       </section>
       <section className="h-screen w-screen" id="feature-scroll-end">
         {/* FEATURE DESC 02 */}
         <div className="flex h-full w-full flex-col-reverse items-center justify-center px-8 py-8  md:flex-row-reverse md:px-20">
-          <div className="relative z-50 flex h-full w-full flex-col items-center justify-center">
-            <div className="absolute top-[20%] z-[-1] w-full px-14">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={featureAnimationList}
+            className="relative z-50 flex h-full w-full flex-col items-center justify-center"
+          >
+            <motion.div
+              variants={featureAnimationItem}
+              className="absolute z-[-1] flex w-full flex-col items-center justify-center"
+            >
               <Heart className="fill-themeRed-500" />
-            </div>
-            <h3 className=" relative mb-4 text-xl text-white before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['02'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent md:text-4xl">
+            </motion.div>
+            <motion.h3
+              variants={featureAnimationItem}
+              className=" relative mb-4 text-xl text-white before:absolute before:-left-[4%] before:-top-[36%] before:font-Anton before:text-[4em] before:opacity-50 before:content-['02'] before:text-stroke-1 before:text-stroke-white before:text-stroke-fill-transparent md:text-4xl"
+            >
               「M3-2023春」にてCD頒布&各種音楽配信サービスで配信開始！
-            </h3>
+            </motion.h3>
             {/* MUSIC LINK */}
-            <div className="">
+            <motion.div variants={featureAnimationItem} className="">
               <h4 className="mb-4 text-lg text-white md:text-3xl">
                 ＜配信先リンク＞
               </h4>
@@ -158,8 +206,8 @@ const FeatureBeforeSection = () => {
                   Listen Now!
                 </ButtonLink>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <div className="h-full  w-full"></div>
         </div>
       </section>
