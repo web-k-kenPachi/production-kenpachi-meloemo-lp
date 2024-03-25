@@ -57,7 +57,7 @@ const FeatureAfterSection = () => {
 
 const InfoSection = () => {
   return (
-    <section id="info" className="overflow-hidden bg-themeYellow-500 ">
+    <section id="info" className="bg-themeYellow-500 ">
       <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-4 py-24 md:px-20">
         <h2 className="md:text-displayXl mb-16 font-Anton text-5xl text-themeRed-800 md:mb-32">
           Information
