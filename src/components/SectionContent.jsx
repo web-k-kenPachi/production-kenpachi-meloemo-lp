@@ -10,6 +10,7 @@ import { TextCircleArea } from './TextCircleArea';
 import { VideoArea } from './VideoArea';
 import { YoutubeMusic } from './IconSvg';
 import { motion } from 'framer-motion';
+import AnimationTextSplit from './AnimationSplit';
 
 export const SectionContent = () => {
   return (
@@ -93,7 +94,7 @@ const InfoSection = () => {
     <section id="info" className="bg-themeYellow-500 ">
       <div className="flex h-auto min-h-screen w-screen flex-col justify-center px-4 py-24 md:px-20">
         <h2 className="md:text-displayXl mb-16 font-Anton text-5xl text-themeRed-800 md:mb-32">
-          Information
+          <AnimationTextSplit>Information</AnimationTextSplit>
         </h2>
         <div className="flex h-full w-full flex-col items-center justify-center gap-10 md:flex-row md:gap-0">
           <div className="relative grid w-full grid-cols-1 grid-rows-1 ">
@@ -183,7 +184,7 @@ const InfoSection = () => {
       <div className="h-full min-h-screen w-screen bg-themeYellow-500 px-4 py-24 md:px-20">
         <div className="m-auto w-full max-w-[1360px]">
           <h2 className="md:text-displayXl relative  z-[51] ml-[4%] w-full text-right font-Anton text-5xl text-themeRed-800 ">
-            Promotion
+            <AnimationTextSplit>Promotion</AnimationTextSplit>
           </h2>
         </div>
         <div className="relative z-50 m-auto -mt-6 h-full w-full max-w-[1360px] overflow-hidden rounded-2xl border-2 border-black md:-mt-12 ">
@@ -221,9 +222,18 @@ const MessageSection = () => {
         <div className="flex h-auto min-h-screen w-screen items-center justify-end px-4 py-12 md:px-20">
           <div className="w-full md:w-4/6">
             <h2 className="md:text-displayXl relative z-10  -ml-2 font-Anton text-5xl text-white mix-blend-difference md:-ml-8">
-              MESSAGE
+              <AnimationTextSplit>MESSAGE</AnimationTextSplit>
             </h2>
-            <div className="relative -mt-10 rounded-lg bg-white px-4 py-24 font-NotoSans text-sm leading-6 md:px-10 md:text-base md:leading-8">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: 1,
+              }}
+              className="relative -mt-10 rounded-lg bg-white px-4 py-24 font-NotoSans text-sm leading-6 md:px-10 md:text-base md:leading-8"
+            >
               <p className="mb-6 text-base font-bold">
                 このミニアルバムについてと「M3-2023春」での頒布を終えて
               </p>
@@ -257,7 +267,7 @@ const MessageSection = () => {
                 各種音楽配信サービスでも視聴できますので今後ともよろしくおねがいいたします！
               </p>
               <p className="text-right">kenPachi[.design]</p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

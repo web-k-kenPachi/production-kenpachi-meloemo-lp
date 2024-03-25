@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import ModalVideo from 'react-modal-video';
+import { motion } from 'framer-motion';
 
 import 'react-modal-video/scss/modal-video.scss';
 import { Play } from './IconSvg';
+
+const animationDisplay = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } },
+  hidden: { opacity: 0, y: 50 },
+};
 
 export const VideoArea = () => {
   return (
@@ -27,7 +33,11 @@ const ComponentVideo01 = () => {
         videoId="ljyB57S37ho"
         onClose={() => setOpen(false)}
       />
-      <button
+      <motion.button
+        variants={animationDisplay}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
         className="h-auto w-full place-self-end shadow-lg md:w-8/12"
         onClick={() => setOpen(true)}
       >
@@ -40,7 +50,7 @@ const ComponentVideo01 = () => {
             <Play />
           </div>
         </div>
-      </button>
+      </motion.button>
     </>
   );
 };
@@ -57,7 +67,11 @@ const ComponentVideo02 = () => {
         videoId="zY40Di-O-xU"
         onClose={() => setOpen(false)}
       />
-      <button
+      <motion.button
+        variants={animationDisplay}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
         className="h-auto w-full shadow-lg  md:w-8/12"
         onClick={() => setOpen(true)}
       >
@@ -70,7 +84,7 @@ const ComponentVideo02 = () => {
             <Play />
           </div>
         </div>
-      </button>
+      </motion.button>
     </>
   );
 };
