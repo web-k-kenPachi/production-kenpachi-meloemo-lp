@@ -13,9 +13,9 @@ import {
   Sparkles,
 } from '@react-three/drei';
 import { ModelCDCase } from './ModelCDCase';
-import Heart from './Heart';
-import IconRotate from './IconRotate';
-import IconDown from './IconDown';
+import {Heart} from './IconSvg';
+import { IconRotate } from './IconSvg';
+import { IconDown } from './IconSvg';
 
 // const randomNumber = (min, max) =>
 //   Math.floor(Math.random() * (max - min + 1) + min);

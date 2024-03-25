@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 
 import 'react-modal-video/scss/modal-video.scss';
-import Play from './Play';
+import { Play } from './IconSvg';
 
 export const VideoArea = () => {
   return (

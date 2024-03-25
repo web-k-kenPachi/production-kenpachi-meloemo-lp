@@ -1,13 +1,4 @@
-import {
-  AdaptiveDpr,
-  AdaptiveEvents,
-  Environment,
-  Float,
-  Lightformer,
-  OrthographicCamera,
-  Preload,
-  View,
-} from '@react-three/drei';
+import { AdaptiveDpr, Environment, Float, Preload } from '@react-three/drei';
 import { ModelCDCaseScroll } from './ModelCDCaseScroll';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';

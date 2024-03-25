@@ -1,15 +1,15 @@
-import AmazonMusic from './AmazonMusic';
-import AppleMusic from './AppleMusic';
+import { AmazonMusic } from './IconSvg';
+import { AppleMusic } from './IconSvg';
 import ButtonLink from './ButtonLink';
-import Heart from './Heart';
+import { Heart } from './IconSvg';
 import {
   MotionTextFeature,
   MotionTextMeloEmo,
 } from './MotionTextInfiniteMaterial';
-import Spotify from './Spotify';
-import YoutubeMusic from './YoutubeMusic';
+import { Spotify } from './IconSvg';
+import { YoutubeMusic } from './IconSvg';
 
-export const ScrollAnimationSection = () => {
+export const SectionScrollAnimation = () => {
   return (
     <>
       <HeroSection />

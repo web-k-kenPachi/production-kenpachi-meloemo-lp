@@ -1,17 +1,17 @@
-import AmazonMusic from './AmazonMusic';
-import AppleMusic from './AppleMusic';
+import { AmazonMusic } from './IconSvg';
+import { AppleMusic } from './IconSvg';
 import ButtonLink from './ButtonLink';
 import { FeatureSlide } from './FeatureSlide';
-import Heart from './Heart';
+import { Heart } from './IconSvg';
 import InfiniteTrackSlide from './InfiniteTrackSlide';
 import Noise from './Noise';
-import Spotify from './Spotify';
+import { Spotify } from './IconSvg';
 import { TextCircleArea } from './TextCircleArea';
 import { VideoArea } from './VideoArea';
-import YoutubeMusic from './YoutubeMusic';
+import { YoutubeMusic } from './IconSvg';
 import { motion } from 'framer-motion';
 
-export const ContentSection = () => {
+export const SectionContent = () => {
   return (
     <div className="relative z-50">
       <FeatureAfterSection />

@@ -1,8 +1,6 @@
-import { Canvas, useFrame } from '@react-three/fiber';
-import { View, OrthographicCamera, Preload, Sphere } from '@react-three/drei';
-import { Background } from '../components/Background';
+import { Canvas } from '@react-three/fiber';
+import { View, OrthographicCamera, Preload } from '@react-three/drei';
 import * as THREE from 'three';
-import BgGrid from '../components/BgGrid';
 import Noise from '../components/Noise';
 import { motion } from 'framer-motion';
 
@@ -10,12 +8,6 @@ export default function Scene() {
   return (
     <>
       <Noise className="main-visual-clip absolute h-full w-full overflow-hidden opacity-35" />
-      {/* <BgGrid
-        className="absolute h-full w-full overflow-hidden opacity-40"
-        style={{
-          clipPath: 'inset(2rem 5rem 2rem 5rem round 1rem)',
-        }}
-      /> */}
       <div className="main-visual-clip absolute z-10 h-full  w-full overflow-hidden mix-blend-difference">
         <motion.div
           className="absolute ml-[5rem] mt-[2rem] flex h-full items-start justify-center text-nowrap font-DotGothic text-[30vw] font-bold text-white"
