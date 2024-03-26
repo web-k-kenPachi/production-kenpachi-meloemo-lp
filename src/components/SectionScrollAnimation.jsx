@@ -9,6 +9,7 @@ import {
 import { Spotify } from './IconSvg';
 import { YoutubeMusic } from './IconSvg';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export const SectionScrollAnimation = () => {
   return (
@@ -20,10 +21,15 @@ export const SectionScrollAnimation = () => {
 };
 
 const HeroSection = () => {
+  const hiddenMask = `repeating-linear-gradient(-45deg,  rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+  const visibleMask = `repeating-linear-gradient(-45deg,  rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   return (
     <>
       <div className="absolute left-[-6%]  top-1/4 z-50 -translate-y-1/2 px-8 py-4 md:left-[-2%] md:top-[10%] md:px-20 md:py-8">
-        <div className="md:text-displaySm w-fit -rotate-6 bg-black px-2 py-1 text-2xl text-white">
+        <div className="w-fit -rotate-6 bg-black px-2 py-1 text-2xl text-white md:text-displaySm">
           CD頒布＆楽曲配信中！
         </div>
       </div>
@@ -62,23 +68,47 @@ const HeroSection = () => {
               </span>
             </div>
             <div className="absolute right-[6%] top-[66%] h-auto w-1/2 -translate-y-1/2">
-              <figure className="hidden h-auto w-full md:block">
+              <motion.figure
+                initial={false}
+                animate={
+                  isLoaded && isInView
+                    ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+                    : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+                }
+                transition={{ duration: 0.5, delay: 3.5, ease: 'easeOut' }}
+                viewport={{ once: true }}
+                onViewportEnter={() => setIsInView(true)}
+                className="hidden h-auto w-full md:block"
+              >
                 <img
                   src="./assets/images/main-illust.png"
                   alt="Hatsune Miku Illust"
                   className="drop-shadow-2xl"
+                  onLoad={() => setIsLoaded(true)}
                 />
-              </figure>
+              </motion.figure>
             </div>
-            <div className="absolute right-[12%] top-[calc(2rem-1%)] md:right-[10%]">
-              <div className="md:text-displaySm flex flex-col gap-[min(2.5vw,3rem)] text-xl  [writing-mode:vertical-rl]">
+            <div className="absolute right-[12%] top-[calc(2rem-1%)] overflow-hidden md:right-[10%]">
+              <motion.div
+                initial={{ clipPath: 'inset(0 0 100% 0)' }}
+                whileInView={{
+                  clipPath: 'inset(0 0 0 0)',
+                }}
+                transition={{
+                  duration: 0.8,
+                  delay: 4.5,
+                  ease: 'easeOut',
+                }}
+                viewport={{ once: true }}
+                className="flex flex-col gap-[min(2.5vw,3rem)] text-xl [writing-mode:vertical-rl]  md:text-displaySm"
+              >
                 <span className="gradient-bg--opacity hidden w-fit p-2 text-white md:block">
                   心の琴線に触れる、
                 </span>
                 <span className="gradient-bg--opacity hidden w-fit p-2 text-white  md:block">
                   えもいメロディー。
                 </span>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
