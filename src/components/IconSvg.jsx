@@ -15,7 +15,7 @@ export const Heart = (props) => {
     <svg
       width="100%"
       height="100%"
-      viewBox="-20 0 300 280"
+      viewBox="-10 -40 300 280"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
